@@ -1,0 +1,79 @@
+::ng-deep .event-card {
+  width: 22rem;
+  height: 18rem;
+  background: #f8f9fa;
+}
+
+:host ::ng-deep .p-card-header {
+  background: #90e0ef;
+  height: 3rem;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+:host ::ng-deep .p-card .p-card-content {
+  padding: unset;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 4px;
+}
+
+:host ::ng-deep .p-carousel-container {
+  text-align: center;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  background-color: black;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:focus {
+  box-shadow: none;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next:focus {
+  box-shadow: none;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev {
+  margin-top: 4rem;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+  margin-top: 4rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.info-row-date {
+  display: flex;
+}
+
+:host ::ng-deep .p-card .p-card-body {
+  padding: 1.25rem 0 0 0;
+}
+
+.event-button {
+  color: white;
+  background: #90e0ef;
+  border: unset;
+}
+
+.event-button:hover{
+  background: #90e0ef;
+}
+
+.event-button:focus{
+  box-shadow: none;
+}
