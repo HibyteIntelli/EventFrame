@@ -1,0 +1,80 @@
+:host ::ng-deep .event-detailed-card {
+  width: 40rem;
+  background: #f8f9fa;
+  border-radius: unset;
+}
+
+:host ::ng-deep .p-card-header {
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-transform: uppercase;
+}
+
+:host ::ng-deep .p-card .p-card-content {
+  padding: unset;
+}
+
+.card-header-colored-text {
+  background: #7BB7AE;
+  color: white;
+  text-align: center;
+  width: 175px;
+  height: 45px
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.info-row-date {
+  display: flex;
+}
+
+.event-button {
+  color: white;
+  background: #98D1E2;
+  border: unset;
+}
+
+.event-button:hover {
+  background: #D0EAF2;
+}
+
+.event-button:focus {
+  box-shadow: none;
+}
+
+.title-font {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.content-list {
+  width: 20rem;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-button {
+  color: white;
+  background: #98D1E2;
+  border: unset;
+  width: 150px;
+  height: 43px;
+}
+
+.content-button:hover {
+  background: #D0EAF2;
+}
+
+.content-button:focus {
+  box-shadow: none;
+}

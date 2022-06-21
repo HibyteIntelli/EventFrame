@@ -1,1 +1,33 @@
-<p>event-detailed-card works!</p>
+<p-card styleClass="event-detailed-card" header="SEMINAR">
+  <ng-template pTemplate="header">
+    <div class="card-header-colored-text">
+      <p>arbeitsreicht</p>
+    </div>
+  </ng-template>
+  <div>
+    <p>Kommunikation digital gedacht – Die Potenziale digitaler Medien für den Unternehmenserfolg nutzen</p>
+    <div class="info-row">
+      <b><p>{{event.location}}</p></b>
+      <div class="info-row-date">
+        <b><p class="p-r-5">{{event.date}} | </p></b>
+        <b><p>{{event.hour}} Uhr</p></b>
+      </div>
+    </div>
+    <p>In diesem Seminar erfahren Sie, wie Sie Ihre Kommunikationsstrategie von der Zielformulierung bis zum
+      eingesetzten Medium in Zeiten der digitalen Transformation ausrichten und schärfen können.</p>
+    <div *ngIf="showDetails">
+      <p class="title-font">INHALTE:</p>
+      <div class="content-section">
+        <div class="content-list">
+          <p>probably ngfor through the list of contents</p>
+        </div>
+        <button pButton pRipple type="button" label="ZUM EVENT" class="p-button-rounded content-button"></button>
+      </div>
+    </div>
+    <div class="p-b-20 center">
+      <button pButton pRipple type="button" label="{{showDetailsButtonText}}" class="p-button-rounded event-button"
+              (click)="showEventDetails()"></button>
+    </div>
+  </div>
+
+</p-card>

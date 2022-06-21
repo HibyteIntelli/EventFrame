@@ -23,11 +23,27 @@
   padding-bottom: 20px;
 }
 
-.p-t-10{
-  padding-top:10px;
+.p-t-10 {
+  padding-top: 10px;
+}
+
+.p-t-12 {
+  padding-top: 12px;
+}
+
+.p-l-21 {
+  padding-left: 21px;
+}
+
+.p-r-21 {
+  padding-right: 21px;
 }
 
 .underline {
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.center {
+  text-align: center;
 }

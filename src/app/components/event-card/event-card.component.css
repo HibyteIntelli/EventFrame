@@ -1,12 +1,27 @@
-::ng-deep .event-card {
+:host ::ng-deep .event-card {
   width: 22rem;
   height: 18rem;
-  background: #f8f9fa;
+  background: #F7F7F7;
+  border-radius: unset;
+
 }
 
 :host ::ng-deep .p-card-header {
-  background: #90e0ef;
+  background: #98D1E2;
   height: 3rem;
+}
+
+.title-text{
+  top: 940px;
+  left: 788px;
+  width: 80px;
+  height: 31px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.event-category{
+  text-decoration: underline;
 }
 
 .card-header-row {
@@ -23,6 +38,7 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 4px;
+  background-color: #33333372;
 }
 
 :host ::ng-deep .p-carousel-container {
@@ -66,14 +82,14 @@
 
 .event-button {
   color: white;
-  background: #90e0ef;
+  background: #98D1E2;
   border: unset;
 }
 
-.event-button:hover{
-  background: #90e0ef;
+.event-button:hover {
+  background: #D0EAF2;
 }
 
-.event-button:focus{
+.event-button:focus {
   box-shadow: none;
 }
