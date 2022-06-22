@@ -1,13 +1,14 @@
 <p-card styleClass="event-detailed-card" header="SEMINAR">
   <ng-template pTemplate="header">
-    <div class="card-header-colored-text">
+    <div class="small-rectangle green">
       <p>arbeitsreicht</p>
     </div>
   </ng-template>
   <div>
     <p>Kommunikation digital gedacht – Die Potenziale digitaler Medien für den Unternehmenserfolg nutzen</p>
     <div class="info-row">
-      <b><p>{{event.location}}</p></b>
+      <div class="flex"><i class="pi pi-map-marker p-t-16" *ngIf="showDetails"></i><b><p>{{event.location}}</p></b>
+      </div>
       <div class="info-row-date">
         <b><p class="p-r-5">{{event.date}} | </p></b>
         <b><p>{{event.hour}} Uhr</p></b>
@@ -16,18 +17,42 @@
     <p>In diesem Seminar erfahren Sie, wie Sie Ihre Kommunikationsstrategie von der Zielformulierung bis zum
       eingesetzten Medium in Zeiten der digitalen Transformation ausrichten und schärfen können.</p>
     <div *ngIf="showDetails">
-      <p class="title-font">INHALTE:</p>
-      <div class="content-section">
+      <p class="h4">INHALTE:</p>
+      <div class="content-section center">
         <div class="content-list">
-          <p>probably ngfor through the list of contents</p>
+          <p>probably ngfor through the list of contents probably ngfor through the list of contents probably ngfor
+            through the list of contents probably ngfor through the list of contents probably ngfor through the list of
+            contents probably ngfor through the list of contents probably ngfor through the list of contents probably
+            ngfor
+            through the list of contents probably ngfor through the list of contents</p>
         </div>
-        <button pButton pRipple type="button" label="ZUM EVENT" class="p-button-rounded content-button"></button>
+        <button pButton pRipple type="button" label="ZUM EVENT" class="rounded-button turqoise turqoise-hover"></button>
+      </div>
+      <div class="center m-b-51">
+        <p class="h4 ">ALLGEMEINE INFORMATIONEN</p>
+        <div class="extra-information-row m-b">
+          <div class="height-rectangle turqoise-light p-l-20 p-r-20 center">
+            <div class="information-text">
+              <p class="normal-bold uppercase">haus der industrie</p>
+              <p>Schiffgraben 36, 30175 Hannover</p>
+            </div>
+          </div>
+          <div class="height-rectangle turqoise-light p-l-20 p-r-20 center">
+
+          </div>
+          <div class="height-rectangle turqoise-light p-l-20 p-r-20 center">
+
+          </div>
+          <div class="height-rectangle turqoise-light p-l-20 p-r-20 center">
+
+          </div>
+        </div>
       </div>
     </div>
-    <div class="p-b-20 center">
-      <button pButton pRipple type="button" label="{{showDetailsButtonText}}" class="p-button-rounded event-button"
+    <div class="p-b-20 text-center">
+      <button pButton pRipple type="button" label="{{showDetailsButtonText}}"
+              class="rounded-button turqoise turqoise-hover"
               (click)="showEventDetails()"></button>
     </div>
   </div>
-
 </p-card>

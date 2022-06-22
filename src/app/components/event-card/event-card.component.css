@@ -1,37 +1,35 @@
 :host ::ng-deep .event-card {
-  width: 22rem;
-  height: 18rem;
+  width: 24.188rem;
+  height: 23.188rem;
   background: #F7F7F7;
   border-radius: unset;
-
+  box-shadow: 10px 10px 10px #00000029;
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 :host ::ng-deep .p-card-header {
   background: #98D1E2;
-  height: 3rem;
-}
-
-.title-text{
-  top: 940px;
-  left: 788px;
-  width: 80px;
-  height: 31px;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.event-category{
-  text-decoration: underline;
-}
-
-.card-header-row {
+  height: 5rem;
+  transform: matrix(1, 0, 0, 1, 0, 0);
   display: flex;
   justify-content: space-between;
   color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
 }
 
 :host ::ng-deep .p-card .p-card-content {
-  padding: unset;
+  padding-bottom: 1.875rem;
+}
+
+:host ::ng-deep .p-card .p-card-body {
+  padding: 1.25rem 1.25rem 0 1.25rem !important;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-indicators {
+  padding: 3rem;
 }
 
 :host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
@@ -65,6 +63,16 @@
   margin-top: 4rem;
 }
 
+::ng-deep .p-button {
+  border: none;
+
+}
+
+::ng-deep .p-button:focus {
+  border: none;
+  box-shadow: none;
+}
+
 .info-row {
   display: flex;
   justify-content: space-between;
@@ -80,16 +88,7 @@
   padding: 1.25rem 0 0 0;
 }
 
-.event-button {
-  color: white;
-  background: #98D1E2;
-  border: unset;
-}
 
-.event-button:hover {
-  background: #D0EAF2;
-}
-
-.event-button:focus {
-  box-shadow: none;
+.turqoise-hover:hover {
+  background: #D0EAF2 0% 0% no-repeat padding-box;
 }

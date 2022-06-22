@@ -1,11 +1,13 @@
 :host ::ng-deep .event-detailed-card {
-  width: 40rem;
+  width: 44rem;
   background: #f8f9fa;
   border-radius: unset;
+  padding-left: 4.375rem;
+  padding-right: 4.375rem;
+  box-shadow: 10px 10px 10px #00000029;
 }
 
 :host ::ng-deep .p-card-header {
-  margin-right: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -16,12 +18,8 @@
   padding: unset;
 }
 
-.card-header-colored-text {
-  background: #7BB7AE;
-  color: white;
-  text-align: center;
-  width: 175px;
-  height: 45px
+:host ::ng-deep .p-card .p-card-body {
+  padding: unset;
 }
 
 .info-row {
@@ -35,27 +33,9 @@
   display: flex;
 }
 
-.event-button {
-  color: white;
-  background: #98D1E2;
-  border: unset;
-}
-
-.event-button:hover {
-  background: #D0EAF2;
-}
-
-.event-button:focus {
-  box-shadow: none;
-}
-
-.title-font {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
 .content-list {
   width: 20rem;
+  text-align: left;
 }
 
 .content-section {
@@ -63,18 +43,11 @@
   justify-content: space-between;
 }
 
-.content-button {
-  color: white;
-  background: #98D1E2;
-  border: unset;
-  width: 150px;
-  height: 43px;
+.turqoise-hover:hover {
+  background: #D0EAF2 0% 0% no-repeat padding-box;
 }
 
-.content-button:hover {
-  background: #D0EAF2;
-}
-
-.content-button:focus {
-  box-shadow: none;
+.extra-information-row {
+  display: flex;
+  justify-content: space-evenly;
 }
