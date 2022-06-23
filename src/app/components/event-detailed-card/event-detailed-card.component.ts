@@ -10,12 +10,16 @@ export class EventDetailedCardComponent implements OnInit {
   event: Event;
   showDetails: boolean = false;
   showDetailsButtonText: string='Mehr erfahren';
+  mobile: boolean;
 
   constructor() {
   }
 
   ngOnInit(): void {
     this.event = {id: 1, title: 'Workshop', location:'Hannover', date: '24.05.2021', hour: 12.00};
+    if (window.screen.width <=480) {
+      this.mobile = true;
+    }
   }
 
   showEventDetails() {

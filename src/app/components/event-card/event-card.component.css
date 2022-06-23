@@ -1,94 +1,99 @@
 :host ::ng-deep .event-card {
-  width: 24.188rem;
-  height: 23.188rem;
+  max-width: 24rem;
   background: #F7F7F7;
   border-radius: unset;
   box-shadow: 10px 10px 10px #00000029;
   opacity: 1;
-  transform: matrix(1, 0, 0, 1, 0, 0);
 }
-
 :host ::ng-deep .p-card-header {
   background: #98D1E2;
-  height: 5rem;
-  transform: matrix(1, 0, 0, 1, 0, 0);
   display: flex;
   justify-content: space-between;
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 1.5rem 1.17rem;
   align-items: center;
 }
-
 :host ::ng-deep .p-card .p-card-content {
-  padding-bottom: 1.875rem;
+  padding: 0;
+  color: #333333;
 }
-
 :host ::ng-deep .p-card .p-card-body {
-  padding: 1.25rem 1.25rem 0 1.25rem !important;
+  padding: 2.75rem 0.5rem 1.25rem 0.5rem;
 }
-
 :host ::ng-deep .p-carousel .p-carousel-indicators {
-  padding: 3rem;
+  padding: 0;
+  align-items: center;
 }
-
+:host ::ng-deep .p-carousel-prev {
+  align-self: center;
+}
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+  margin: -2rem 0 0!important;
+}
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next:enabled:hover  {
+  background: none;
+}
 :host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
   width: 0.5rem;
   height: 0.5rem;
-  border-radius: 4px;
-  background-color: #33333372;
+  border-radius: 25px;
+  background: #33333372;
 }
-
-:host ::ng-deep .p-carousel-container {
-  text-align: center;
-}
-
 :host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-  background-color: black;
+  background-color: #333333;
+  width: 0.6rem;
+  height: 0.6rem;
 }
-
-:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:focus {
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button:focus  {
   box-shadow: none;
 }
-
-:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next:focus {
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button:hover {
   box-shadow: none;
 }
-
-:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev {
-  margin-top: 4rem;
-}
-
-:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
-  margin-top: 4rem;
-}
-
-::ng-deep .p-button {
-  border: none;
-
-}
-
-::ng-deep .p-button:focus {
-  border: none;
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:focus, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next:focus {
   box-shadow: none;
 }
-
 .info-row {
   display: flex;
   justify-content: space-between;
-  color: black;
-  border-bottom: 2px solid black;
+  color: #333333;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 0.8rem;
 }
-
-.info-row-date {
+.event-item {
+  padding: 0 0.5rem;
+}
+:host ::ng-deep .p-carousel .pi {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.btn-container {
   display: flex;
+  justify-content: end;
+  padding: 3rem 0 1rem;
+}
+.event-title {
+  padding-top: 2.5rem;
 }
 
-:host ::ng-deep .p-card .p-card-body {
-  padding: 1.25rem 0 0 0;
-}
-
-
-.turqoise-hover:hover {
-  background: #D0EAF2 0% 0% no-repeat padding-box;
+@media only screen and (max-width: 480px) {
+  :host ::ng-deep .p-card-header {
+    padding: 12px;
+  }
+  :host ::ng-deep .p-card .p-card-body {
+    padding: 30px 0 15px 0;
+  }
+  :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+    margin: -48px 0 0!important;
+  }
+  .info-row {
+    padding-bottom: 8px;
+  }
+  .event-title {
+    padding-top: 28px;
+  }
+  .btn-container {
+    justify-content: center;
+    padding: 30px 0;
+  }
 }

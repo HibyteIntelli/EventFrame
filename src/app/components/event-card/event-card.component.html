@@ -1,21 +1,25 @@
-<p-card styleClass="event-card m-b-30">
+<p-card styleClass="event-card">
   <ng-template pTemplate="header">
-    <p class="h4 uppercase text-left">EVENTS</p>
+    <h5 class="uppercase text-left">EVENTS</h5>
     <a class="text-link" href="#">Alle Events</a>
   </ng-template>
-  <p-carousel [value]="events" [numVisible]="1" [numScroll]="1" [circular]="true">
+  <p-carousel [value]="events"
+              [numVisible]="1"
+              [numScroll]="1"
+              [circular]="true">
     <ng-template let-event pTemplate="item">
       <div class="event-item">
         <div class="info-row">
-          <b><p>{{event.title}}</p></b>
+          <p class="f-700 card-text">{{event.title}}</p>
           <div class="info-row-date normal-bold">
-            <p class="p-r-5">{{event.date}} | </p>
-            <p>{{event.hour}} Uhr</p>
+            <p class="card-text f-700">{{event.date}} | {{event.hour}} Uhr</p>
           </div>
         </div>
-        <p>Titel des Events</p>
-        <div class="p-b-20 ">
-          <button pButton pRipple type="button" label="Zum Event"
+        <p class="card-text text-left event-title">Titel des Events</p>
+        <div class="btn-container">
+          <button pButton
+                  type="button"
+                  label="Zum Event"
                   class="rounded-button turqoise turqoise-hover"></button>
         </div>
       </div>

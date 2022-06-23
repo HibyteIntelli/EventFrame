@@ -3,29 +3,47 @@
 @import '~primeng/resources/themes/lara-light-blue/theme.css';
 @import '~primeng/resources/primeng.min.css';
 
-.body {
-  font: normal normal 300 17px/24px Fira Sans;
+body {
+  font: normal normal normal 17px/24px Fira Sans, Arial, Helvetica, sans-serif;
+}
+p {
+  font: normal normal normal 17px/24px Fira Sans, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+h1 {
+  font: normal normal 600 56px/67px Fira Sans, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font: normal normal 600 43px/51px Fira Sans, Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font: normal normal 600 34px/41px Fira Sans, Arial, Helvetica, sans-serif;
+}
+
+h4 {
+  font: normal normal 600 26px/31px Fira Sans, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h5 {
+  font: normal normal 22px/31px Fira Sans, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.card-text {
+  font: normal normal 15px/18px Fira Sans, Arial, Helvetica, sans-serif;
+}
+.f-700 {
+  font-weight: 700;
+}
+.f-300 {
+  font-weight: 300;
 }
 
 .normal-bold {
-  font: normal normal bold 15px/21px Fira Sans;
+  font: normal normal bold 15px/21px Fira Sans, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-}
-
-.h1 {
-  font: normal normal 600 56px/67px Fira Sans;
-}
-
-.h2 {
-  font: normal normal 600 43px/51px Fira Sans;
-}
-
-.h3 {
-  font: normal normal 600 34px/41px Fira Sans;
-}
-
-.h4 {
-  font: normal normal 600 26px/31px Fira Sans;
 }
 
 .text-left {
@@ -34,147 +52,92 @@
 }
 
 .text-link {
-  font: normal normal 300 15px/21px Fira Sans;
+  font: normal normal 300 15px/21px Fira Sans, Arial, Helvetica, sans-serif;
   color: white;
   cursor: pointer;
 }
-
-.big-rectangle {
-  width: 11.938rem;
-  height: 4.438rem;
-}
-
 .small-rectangle {
-  width: 8.625rem;
-  height: 2.813rem;
+  padding: 0.6rem 1.8rem;
   text-align: center;
-  color: white;
 }
 
 .height-rectangle {
   height: 15rem;
-  width: 8rem;
+  width: 23%;
   text-align: center;
   color: #333333;
-  box-shadow: 0px 3px 3px #33333329;
-}
-
-.height-rectangle-title {
-  width: 8rem;
-  height: 4.375rem;
-  text-align: center;
-  color: #333333;
+  box-shadow: 0 3px 3px #33333329;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .blue {
-  background: #4E8AB4 0% 0% no-repeat padding-box;
+  background: #4E8AB4;
   opacity: 1;
 }
 
 .blue:hover {
-  background: #B0CADD 0% 0% no-repeat padding-box;
+  background: #B0CADD;
   opacity: 1;
 }
 
 .green {
-  background: #7BB7AE 0% 0% no-repeat padding-box;
+  background: #7BB7AE;
   opacity: 1;
 }
 
-
 .turqoise {
-  background: #98D1E2 0% 0% no-repeat padding-box;
+  background: #98D1E2;
+  border: 1px solid #98D1E2;
 }
 
+
 .turqoise-light {
-  background: #D0EAF2 0% 0% no-repeat padding-box;
+  background: #D0EAF2;
 }
 
 .rounded-button {
   color: #FFFFFF;
-  height: 2.5rem;
-  border: unset;
-  box-shadow: 0px 10px 10px #00000029;
+  font-weight: 500;
+  box-shadow: 0 10px 10px #00000029;
   border-radius: 25px;
-  opacity: 1;
-  font: normal normal 500 17px/24px Fira Sans;
 }
-
-.p-l-5 {
-  padding-left: 0.313rem;
+.p-p-3 {
+  padding: 1rem;
 }
-
-.p-l-10 {
-  padding-left: 0.625rem;
+.p-pb-3 {
+  padding-bottom: 1rem;
 }
-
-.p-r-10 {
-  padding-right: 0.625rem;
+.p-pb-4 {
+  padding-bottom: 1.5rem;
 }
-
-.p-r-5 {
-  padding-right: 0.313rem;
+.p-pb-5 {
+  padding-bottom: 2rem;
 }
-
-.p-b-20 {
-  padding-bottom: 1.25rem;
+.p-pt-7 {
+  padding-top: 3rem;
 }
-
-.p-l-20 {
-  padding-left: 1.25rem;
+.p-pt-5 {
+  padding-top: 2rem;
 }
-
-.p-r-20 {
-  padding-right: 1.25rem;
+.p-pt-3 {
+  padding-top: 1rem;
 }
-
-.p-t-10 {
-  padding-top: 0.625rem;
+.p-pt-4 {
+  padding-top: 1.5rem
 }
-
-.p-l-21 {
-  padding-left: 1.313rem;
+.p-pr-1 {
+  padding-right: 0.5rem;
 }
-
-.p-r-21 {
-  padding-right: 1.313rem;
+.p-pr-2 {
+  padding-right: 0.75rem;
 }
-
-.p-t-31 {
-  padding-top: 1.938rem;
-}
-
-.p-b-18 {
-  padding-bottom: 18px;
-}
-
-.p-t-16 {
-  padding-top: 1.1rem;
-}
-
-.m-b-51 {
-  margin-bottom: 3.188rem;
-}
-
-.p-t-100 {
-  padding-top: 6.25rem;
-}
-
-.underline {
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.p-pr-3 {
+  padding-right: 1rem
 }
 
 .text-center {
   text-align: center;
-}
-
-.m-b-30 {
-  margin-bottom: 1.875rem;
-}
-
-.right {
-  float: right;
 }
 
 .flex {
@@ -187,4 +150,39 @@
 
 .uppercase {
   text-transform: uppercase;
+}
+.white {
+  color: white;
+}
+.turqoise:hover {
+  background: transparent!important;
+  border: 1px solid #98D1E2!important;
+  color: #98D1E2!important;
+}
+.turqoise:focus {
+  box-shadow: 0 10px 10px #00000029;
+}
+
+@media only screen and (max-width: 480px) {
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  h5 {
+    font: normal normal 500 14px/20px Fira Sans, Arial, Helvetica, sans-serif;
+  }
+  .rounded-button {
+    font-size: 15px;
+  }
+  .text-link {
+    font: normal normal normal 12px/17px Fira Sans, Arial, Helvetica, sans-serif;
+  }
+  .card-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .height-rectangle {
+    height: 200px;
+    width: 48%;
+  }
 }
