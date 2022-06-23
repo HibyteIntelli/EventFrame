@@ -105,4 +105,7 @@
   .details-container {
     padding-bottom: 0;
   }
+  .btn-container {
+    padding: 30px 0;
+  }
 }
