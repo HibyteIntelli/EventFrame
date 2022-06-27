@@ -2645,7 +2645,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 .p-carousel .p-carousel-content .p-carousel-next {
   width: 2rem;
   height: 2rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #333333;
   border: 0 none;
   background: transparent;
   border-radius: 50%;
@@ -2654,7 +2654,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover,
 .p-carousel .p-carousel-content .p-carousel-next:enabled:hover {
-  color: rgba(255, 255, 255, 0.87);
+  color: #333333;
   border-color: transparent;
   background: rgba(255, 255, 255, 0.03);
 }
