@@ -6,7 +6,6 @@
   padding-right: 1.8rem;
   box-shadow: 10px 10px 10px #00000029;
 }
-
 :host ::ng-deep .p-card-header {
   display: flex;
   justify-content: flex-end;
