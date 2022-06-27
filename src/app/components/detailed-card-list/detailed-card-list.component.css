@@ -1,24 +1,3 @@
 .styled-btn {
-  margin: 4px 8px;
-  background-color: #d0eaf2!important;
-  width: 192px;
-}
-
-.styled-btn:hover {
-  background-color: #98d1e2!important;
-}
-
-:host ::ng-deep .p-button{
-  border-radius: unset !important;
-  border-color: #d0eaf2;
-}
-
-:host ::ng-deep .p-button:hover{
-  border-radius: unset !important;
-  border-color: #98d1e2;
-}
-
-:host ::ng-deep .p-button:active{
-  border-radius: unset !important;
-  border-color: #98d1e2;
+  margin: 8px;
 }

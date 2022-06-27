@@ -27,7 +27,7 @@ export class EventDetailedCardComponent implements OnInit {
   showEventDetails() {
     this.showDetails=!this.showDetails;
     if(this.showDetails) {
-      this.showDetailsButtonText='Weniger anzeigen';
+      this.showDetailsButtonText='^';
     } else {
       this.showDetailsButtonText='Mehr erfahren';
     }

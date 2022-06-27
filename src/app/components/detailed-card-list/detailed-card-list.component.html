@@ -1,23 +1,8 @@
 <div>
   <div class="p-pt-3 p-pb-3 text-center btn-container">
-    <button pButton class="styled-btn"
+    <button *ngFor="let category of categories" pButton class="styled-btn turqoise"
             type="button"
-            label="NEUSTE">
-    </button>
-
-    <button pButton class="styled-btn"
-            type="button"
-            label="ARBEITSRECHT">
-    </button>
-
-    <button pButton class="styled-btn"
-            type="button"
-            label="HR_MANAGEMENT">
-    </button>
-
-    <button pButton class="styled-btn"
-            type="button"
-            label="SONSTIGE">
+            label="{{category}}">
     </button>
   </div>
 

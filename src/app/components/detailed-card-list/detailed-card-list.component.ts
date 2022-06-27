@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {EventsService} from '../../services/events/events.service';
 import {Event} from '../../data/event';
-import {from} from 'rxjs';
 
 @Component({
   selector: 'app-detailed-card-list',
@@ -11,6 +10,7 @@ import {from} from 'rxjs';
 export class DetailedCardListComponent implements OnInit {
   events: Event[];
   filteredEvents: Event[];
+  categories: string[] = [];
 
   constructor(private eventService: EventsService) {
   }
@@ -18,6 +18,11 @@ export class DetailedCardListComponent implements OnInit {
   ngOnInit(): void {
     this.eventService.getAllEvents().subscribe(events => {
       this.events = events.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
+      this.events.forEach(event => {
+        if (event.category ) {
+          this.categories.push(event.category);
+        }
+      });
       this.paginateData(0);
     })
   }

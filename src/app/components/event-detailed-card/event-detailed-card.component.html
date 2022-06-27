@@ -16,19 +16,25 @@
         <p class="f-700">{{event?.startDate | date: "dd.MM.yyyy | h:mm" }} Uhr</p>
       </div>
     </div>
-    <p [class.display] = "'mobile: true;'"
+    <p [class.display]="'mobile: true;'"
        class="p-pt-4" [class.description]="!showDetails">{{event?.description}}</p>
-    <div *ngIf="showDetails" class="p-pt-3 p-pb-3 details-container" fxLayout="column" fxLayoutAlign="center center" >
+    <div *ngIf="showDetails" class="p-pt-3 p-pb-3 details-container" fxLayout="column" fxLayoutAlign="center center">
       <button pButton type="button" label="ZUM EVENT" class="rounded-button turqoise"></button>
-
     </div>
     <div class="p-pt-3 p-pb-3 text-center btn-container">
-      <button pButton
+      <button pButton *ngIf="!this.showDetails"
               type="button"
-              label="{{showDetailsButtonText}}"
+              label="Mehr erfahren"
               class="rounded-button turqoise"
               (click)="showEventDetails()">
       </button>
+
+        <button pButton *ngIf="this.showDetails"
+                type="button"
+                icon="pi pi-chevron-up" iconPos="left"
+                class="rounded-button turqoise"
+                (click)="showEventDetails()">
+        </button>
     </div>
   </div>
 </p-card>
