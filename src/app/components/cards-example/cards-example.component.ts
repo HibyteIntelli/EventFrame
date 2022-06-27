@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {EventsService} from "../../services/events/events.service";
 import {Event} from "../../data/event";
+import {WorkshopsService} from '../../services/workshops/workshops.service';
+import {Workshop} from '../../data/workshop';
+import {map} from 'rxjs';
 
 @Component({
   selector: 'app-cards-example',
@@ -10,13 +13,20 @@ import {Event} from "../../data/event";
 export class CardsExampleComponent implements OnInit {
 
   event: Event;
+  workshops: Workshop[] = [];
 
-  constructor(private eventsService: EventsService) {
+  constructor(private eventsService: EventsService,
+              private workshopService: WorkshopsService) {
   }
 
   ngOnInit(): void {
-    // this.eventsService.getEventById(1).subscribe(event => {
-    //   this.event = event;
-    // });
+    this.getWorkshops();
+  }
+
+  getWorkshops() {
+    this.workshopService.getAll().pipe(
+      map((items) => items
+        .map(item => ({ id: item.e_id, title: item.e_name, category: item.e_category, location: item.e_location, date: item.e_date, hour: item.e_hour}))),
+    ).subscribe(mappedItems => this.workshops = mappedItems);
   }
 }
