@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {AuthorizationService} from "./services/authorization/authorization.service";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +8,6 @@ import {AuthorizationService} from "./services/authorization/authorization.servi
 export class AppComponent {
   title = 'EventFrame';
 
-  constructor(private authorizationService: AuthorizationService) {
+  constructor() {
   }
 }

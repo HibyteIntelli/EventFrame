@@ -14,6 +14,7 @@ import {CardsExampleComponent} from './components/cards-example/cards-example.co
 import {CarouselCardListComponent} from './components/carousel-card-list/carousel-card-list.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthorizationInterceptor} from "./providers/authorization.interceptor";
+import {PaginatorModule} from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {AuthorizationInterceptor} from "./providers/authorization.interceptor";
     ButtonModule,
     CardModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    PaginatorModule,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthorizationInterceptor, multi: true}

@@ -15,7 +15,6 @@ export class CarouselCardListComponent implements OnInit {
 
   ngOnInit(): void {
     this.eventService.getAllEvents().subscribe(events => {
-      console.log(events);
       this.events = events;
     })
   }

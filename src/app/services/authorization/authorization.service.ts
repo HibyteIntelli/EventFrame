@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../environments/environment";
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +20,5 @@ export class AuthorizationService {
 
   getBearerToken() {
     return localStorage.getItem('bearerToken');
-  }
-
-  removeLocalStorageData() {
-    localStorage.removeItem('bearerToken');
   }
 }

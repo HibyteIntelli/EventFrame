@@ -21,8 +21,12 @@
     </button>
   </div>
 
-  <div *ngFor="let event of events" fxLayout="column" fxLayoutAlign="space-around center" >
+  <div *ngFor="let event of filteredEvents" fxLayout="column" fxLayoutAlign="space-around center" >
     <br>
     <app-event-detailed-card [event]="event"></app-event-detailed-card>
   </div>
+
+  <p-paginator *ngIf="events?.length"
+    [first]="0"
+    [rows]="4" [totalRecords]="events.length" (onPageChange)="changePage($event)"></p-paginator>
 </div>
