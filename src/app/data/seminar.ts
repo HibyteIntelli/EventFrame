@@ -1,4 +1,4 @@
-export interface Event {
+export interface Seminar {
   id: number;
   title: string;
   category: string;

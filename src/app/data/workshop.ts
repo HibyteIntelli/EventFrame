@@ -1,4 +1,4 @@
-export interface Event {
+export interface Workshop {
   id: number;
   title: string;
   category: string;

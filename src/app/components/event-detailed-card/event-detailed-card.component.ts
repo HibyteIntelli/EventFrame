@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Event} from "../../data/event";
 
 @Component({
@@ -7,7 +7,10 @@ import {Event} from "../../data/event";
   styleUrls: ['./event-detailed-card.component.css']
 })
 export class EventDetailedCardComponent implements OnInit {
+
+  @Input()
   event: Event;
+
   showDetails: boolean = false;
   showDetailsButtonText: string='Mehr erfahren';
   mobile: boolean;
@@ -16,7 +19,6 @@ export class EventDetailedCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.event = {id: 1, title: 'Workshop', location:'Hannover', date: '24.05.2021', hour: 12.00};
     if (window.screen.width <=480) {
       this.mobile = true;
     }

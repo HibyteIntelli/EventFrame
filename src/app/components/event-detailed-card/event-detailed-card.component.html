@@ -11,9 +11,9 @@
       <div class="info-row-date">
         <div class="flex center">
           <i class="pi pi-map-marker p-pr-1" *ngIf="showDetails"></i>
-          <p class="f-700">{{event.location}}</p>
+          <p class="f-700">{{event?.location}}</p>
         </div>
-        <p class="f-700">{{event.date}} | {{event.hour}} Uhr</p>
+        <p class="f-700">{{event?.date}} | {{event?.hour}} Uhr</p>
       </div>
     </div>
     <p [class.display] = "'mobile: true;'"
