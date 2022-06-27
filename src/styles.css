@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~primeicons/primeicons.css';
-@import '~primeng/resources/themes/lara-light-blue/theme.css';
 @import '~primeng/resources/primeng.min.css';
+@import "assets/theme/theme.css";
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
@@ -61,20 +61,16 @@ p {
 h1 {
   font: normal normal 600 56px/67px Fira Sans, Arial, Helvetica, sans-serif;
 }
-
 h2 {
   font: normal normal 600 43px/51px Fira Sans, Arial, Helvetica, sans-serif;
 }
-
 h3 {
   font: normal normal 600 34px/41px Fira Sans, Arial, Helvetica, sans-serif;
 }
-
 h4 {
   font: normal normal 600 26px/31px Fira Sans, Arial, Helvetica, sans-serif;
   margin: 0;
 }
-
 h5 {
   font: normal normal 22px/31px Fira Sans, Arial, Helvetica, sans-serif;
   margin: 0;
@@ -88,17 +84,14 @@ h5 {
 .f-300 {
   font-weight: 300;
 }
-
 .normal-bold {
   font: normal normal bold 15px/21px Fira Sans, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
-
 .text-left {
   text-align: left;
   letter-spacing: 0;
 }
-
 .text-link {
   font: normal normal 300 15px/21px Fira Sans, Arial, Helvetica, sans-serif;
   color: white;
@@ -108,7 +101,6 @@ h5 {
   padding: 0.6rem 1.8rem;
   text-align: center;
 }
-
 .height-rectangle {
   height: 15rem;
   width: 23%;
@@ -118,32 +110,25 @@ h5 {
   padding: 0.8rem;
   margin-bottom: 1rem;
 }
-
 .blue {
   background: #4E8AB4;
   opacity: 1;
 }
-
 .blue:hover {
   background: #B0CADD;
   opacity: 1;
 }
-
 .green {
   background: #7BB7AE;
   opacity: 1;
 }
-
 .turqoise {
   background: #98D1E2;
   border: 1px solid #98D1E2;
 }
-
-
 .turqoise-light {
   background: #D0EAF2;
 }
-
 .rounded-button {
   color: #FFFFFF;
   font-weight: 500;
@@ -183,19 +168,15 @@ h5 {
 .p-pr-3 {
   padding-right: 1rem
 }
-
 .text-center {
   text-align: center;
 }
-
 .flex {
   display: flex;
 }
-
 .center {
   align-items: center;
 }
-
 .uppercase {
   text-transform: uppercase;
 }
