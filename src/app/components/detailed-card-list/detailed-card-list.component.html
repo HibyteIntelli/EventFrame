@@ -1,0 +1,28 @@
+<div>
+  <div class="p-pt-3 p-pb-3 text-center btn-container">
+    <button pButton class="styled-btn"
+            type="button"
+            label="NEUSTE">
+    </button>
+
+    <button pButton class="styled-btn"
+            type="button"
+            label="ARBEITSRECHT">
+    </button>
+
+    <button pButton class="styled-btn"
+            type="button"
+            label="HR_MANAGEMENT">
+    </button>
+
+    <button pButton class="styled-btn"
+            type="button"
+            label="SONSTIGE">
+    </button>
+  </div>
+
+  <div *ngFor="let element of elements" fxLayout="column" fxLayoutAlign="space-around center" >
+    <br>
+    <app-event-detailed-card></app-event-detailed-card>
+  </div>
+</div>
