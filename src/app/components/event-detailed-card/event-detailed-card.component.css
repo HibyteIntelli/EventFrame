@@ -12,20 +12,9 @@
   align-items: flex-end;
   text-transform: uppercase;
 }
-:host ::ng-deep .p-card .p-card-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #333333;
-  margin-bottom: 1rem;
-}
-:host ::ng-deep .p-card .p-card-content {
-  padding: unset;
-}
-
 :host ::ng-deep .p-card .p-card-body {
   padding: 0 2rem;
 }
-
 .info-row {
   display: flex;
   justify-content: space-between;
@@ -33,13 +22,11 @@
   border-bottom: 2px solid #333333;
   padding: 2rem 0 0.5rem 0;
 }
-
 .info-row-date {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-
 .content-list {
   width: 50%;
   text-align: left;
@@ -59,9 +46,6 @@
 }
 .tag-text {
   margin: 0;
-}
-:host ::ng-deep .p-card {
-  color: #333333;
 }
 
 @media only screen and (max-width: 480px) {
