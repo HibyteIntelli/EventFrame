@@ -2,54 +2,7 @@
 @import '~primeicons/primeicons.css';
 @import '~primeng/resources/primeng.min.css';
 @import "assets/theme/theme.css";
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url('assets/fonts/FiraSans-light.woff'); /* IE9 Compat Modes */
-  src: local(''),
-  url('assets/fonts/FiraSans-light.woff') format('woff') /* Modern Browsers */
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('assets/fonts/FiraSans-regular.woff'); /* IE9 Compat Modes */
-  src: local(''),
-  url('assets/fonts/FiraSans-regular.woff') format('woff') /* Modern Browsers */
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 500;
-  src: url('assets/fonts/FiraSans-medium.woff'); /* IE9 Compat Modes */
-  src: local(''),
-  url('assets/fonts/FiraSans-medium.woff') format('woff') /* Modern Browsers */
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: url('assets/fonts/FiraSans-semibold.woff'); /* IE9 Compat Modes */
-  src: local(''),
-  url('assets/fonts/FiraSans-semibold.woff') format('woff') /* Modern Browsers */
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: url('assets/fonts/FiraSans-bold.woff'); /* IE9 Compat Modes */
-  src: local(''),
-  url('assets/fonts/FiraSans-bold.woff') format('woff') /* Modern Browsers */
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: url('assets/fonts/FiraSans-extrabold.woff'); /* IE9 Compat Modes */
-  src: local(''),
-  url('assets/fonts/FiraSans-extrabold.woff') format('woff') /* Modern Browsers */
-}
+@import 'assets/scss/modules/_fonts.scss';
 
 body {
   font: normal normal normal 17px/24px Fira Sans, Arial, Helvetica, sans-serif;
