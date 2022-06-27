@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {EventsService} from "../../services/events/events.service";
+import {Event} from "../../data/event";
 
 @Component({
   selector: 'app-carousel-card-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselCardListComponent implements OnInit {
 
-  constructor() { }
+  events: Event[];
+
+  constructor(private eventService: EventsService) { }
 
   ngOnInit(): void {
+    this.eventService.getAllEvents().subscribe(events => {
+      console.log(events);
+      this.events = events;
+    })
   }
 
 }

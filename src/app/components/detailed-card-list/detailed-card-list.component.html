@@ -21,8 +21,8 @@
     </button>
   </div>
 
-  <div *ngFor="let element of elements" fxLayout="column" fxLayoutAlign="space-around center" >
+  <div *ngFor="let event of events" fxLayout="column" fxLayoutAlign="space-around center" >
     <br>
-    <app-event-detailed-card></app-event-detailed-card>
+    <app-event-detailed-card [event]="event"></app-event-detailed-card>
   </div>
 </div>

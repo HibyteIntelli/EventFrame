@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {EventsService} from "../../services/events/events.service";
+import {Event} from "../../data/event";
 
 @Component({
   selector: 'app-detailed-card-list',
@@ -6,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detailed-card-list.component.css']
 })
 export class DetailedCardListComponent implements OnInit {
+  events: Event[];
 
-  elements: string[];
-
-  constructor() { }
-
-  ngOnInit(): void {
-    this.elements = ['one', 'two', 'three', 'four'];
+  constructor(private eventService: EventsService) {
   }
 
+  ngOnInit(): void {
+    this.eventService.getAllEvents().subscribe(events => {
+      console.log(events)
+      this.events = events;
+    })
+  }
 }

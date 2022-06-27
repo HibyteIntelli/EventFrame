@@ -1,8 +1,10 @@
 export interface Event {
   id: number;
-  title: string;
-  category: string;
+  description: string;
+  name: string;
   location: string;
-  date: string;
-  hour: number;
+  startDate: string;
+  startHour: string;
+  type: string;
+  category: string;
 }
