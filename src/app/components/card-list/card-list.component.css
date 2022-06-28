@@ -77,6 +77,27 @@
   display: none !important;
 }
 
+.xfilter-btn{
+  color: black;
+  background-color: white;
+  border-radius: unset;
+  border-color: transparent;
+}
+
+.xfilter-btn:hover{
+  color: red;
+  background-color: white;
+  border-radius: unset;
+  border-color: transparent;
+}
+
+.xfilter-btn:focus{
+  color: red;
+  background-color: white;
+  border-radius: unset;
+  border-color: transparent;
+}
+
 @media only screen and (max-width: 480px) {
   .category-container {
     display: grid;

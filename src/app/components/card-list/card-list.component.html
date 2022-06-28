@@ -23,6 +23,7 @@
 
     <div *ngIf="isTypeFilterVisible" fxLayout="row" fxLayoutAlign="space-around center" class="types-container">
       <div class="types-div" *ngFor="let type of types" (click)="filterByType(type)">{{type}}</div>
+      <button class="xfilter-btn" pButton type="button" icon="pi pi-times" (click)="removeTypeFilter(selectedType)"></button>
     </div>
 
     <button pButton type="button" icon="pi pi-sliders-v"

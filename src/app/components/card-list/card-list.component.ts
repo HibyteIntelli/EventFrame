@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {EventsService} from '../../services/events.service';
 import {Event, EventCategory, EventType} from '../../data/event';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-card-list',
@@ -11,7 +12,13 @@ export class CardListComponent implements OnInit {
   events: Event[];
   allEvents: Event[];
   filteredEvents: Event[];
-  categories: {label: string, type: EventCategory}[] = [{label: EventCategory.arbeitsrecht, type: EventCategory.arbeitsrecht}, {label: 'HR & RECRUITING' , type: EventCategory.hr}, {label: 'HIGHLIGHTS', type: EventCategory.highlights}, {label: 'PARTNER EVENTS', type: EventCategory.partnerevents}];
+  categories: { label: string, type: EventCategory }[] = [{
+    label: EventCategory.arbeitsrecht,
+    type: EventCategory.arbeitsrecht
+  }, {label: 'HR & RECRUITING', type: EventCategory.hr}, {
+    label: 'HIGHLIGHTS',
+    type: EventCategory.highlights
+  }, {label: 'PARTNER EVENTS', type: EventCategory.partnerevents}];
   types: EventType[] = [EventType.event, EventType.seminar, EventType.workshop];
   isTypeFilterVisible: boolean = false;
   selectedCategory: string;
@@ -51,26 +58,28 @@ export class CardListComponent implements OnInit {
 
   filterByCategory(category: EventCategory) {
     if (this.selectedCategory === category) {
-      this.events = this.allEvents.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());;
+      this.events = this.allEvents.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
+      this.selectedCategory = "";
     } else {
       this.events = this.allEvents?.filter(event => event.category === category);
+      this.selectedCategory = category;
     }
     this.calculatePageCount();
     this.paginateData(0);
     this.selectedPage = 0;
-    this.selectedCategory = category;
   }
 
   filterByType(type: EventType) {
     if (this.selectedType === type) {
-      this.events = this.allEvents.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());;
+      this.events = this.allEvents.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
+      this.selectedType = "";
     } else {
       this.events = this.allEvents.filter(event => event.type === type);
+      this.selectedType = type;
     }
     this.calculatePageCount();
     this.paginateData(0);
     this.selectedPage = 0;
-    this.selectedType = type;
   }
 
   sortByDate() {
@@ -82,5 +91,13 @@ export class CardListComponent implements OnInit {
       this.sorting = 'desc';
     }
     this.paginateData(0);
+  }
+
+  removeTypeFilter(type: string) {
+    this.events = this.allEvents.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
+    this.calculatePageCount();
+    this.paginateData(0);
+    this.selectedPage = 0;
+    this.selectedType = type;
   }
 }
