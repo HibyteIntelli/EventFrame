@@ -13,12 +13,12 @@ export class CardListComponent implements OnInit {
   allEvents: Event[];
   filteredEvents: Event[];
   categories: { label: string, type: EventCategory }[] = [{
-    label: EventCategory.arbeitsrecht,
+    label: 'ARBEITSRECHT',
     type: EventCategory.arbeitsrecht
-  }, {label: 'HR & RECRUITING', type: EventCategory.hr}, {
+  }, {label: 'HR&RECRUITING', type: EventCategory.hr}, {
     label: 'HIGHLIGHTS',
     type: EventCategory.highlights
-  }, {label: 'PARTNER EVENTS', type: EventCategory.partnerevents}];
+  }, {label: 'PARTNEREVENTS', type: EventCategory.partnerevents}];
   types: EventType[] = [EventType.event, EventType.seminar, EventType.workshop];
   isTypeFilterVisible: boolean = false;
   selectedCategory: string;
@@ -27,16 +27,35 @@ export class CardListComponent implements OnInit {
   pageCount: number;
   selectedPage = 0;
 
-  constructor(private eventService: EventsService) {
+  constructor(private eventService: EventsService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    const routeType = this.route.snapshot.queryParams['type'];
+    const routeCategory = this.route.snapshot.queryParams['category'];
+
     this.eventService.getAllEvents().subscribe(events => {
       this.allEvents = events;
-      this.events = events.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
+
+      if (routeType) {
+        this.events = this.allEvents?.filter(event => event.type === routeType);
+        this.selectedType = routeType;
+      }
+
+      if (routeCategory) {
+        if (routeCategory == 'HR') {
+          this.events = this.allEvents?.filter(event => event.category == EventCategory.hr);
+          this.selectedCategory = EventCategory.hr;
+        } else {
+          this.events = this.allEvents?.filter(event => event.category === routeCategory);
+          this.selectedCategory = routeCategory;
+        }
+      }
+
+      this.events = this.events.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
       this.calculatePageCount();
       this.paginateData(0);
-    })
+    });
   }
 
   calculatePageCount() {

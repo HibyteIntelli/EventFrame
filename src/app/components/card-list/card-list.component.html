@@ -3,6 +3,7 @@
     <button *ngFor="let category of categories" pButton class="styled-btn"
             type="button"
             label="{{category.label}}"
+            [class.selectedCateg]="(selectedCategory | uppercase) === category.label"
             (click)="filterByCategory(category.type)">
     </button>
   </div>
@@ -22,8 +23,10 @@
             class="p-button-rounded p-button-secondary p-button-text"></button>
 
     <div *ngIf="isTypeFilterVisible" fxLayout="row" fxLayoutAlign="space-around center" class="types-container">
-      <div class="types-div" *ngFor="let type of types" (click)="filterByType(type)">{{type}}</div>
-      <button class="xfilter-btn" pButton type="button" icon="pi pi-times" (click)="removeTypeFilter(selectedType)"></button>
+      <div class="types-div" *ngFor="let type of types" [class.selectedTp]="selectedType === type"
+           (click)="filterByType(type)">{{type}}</div>
+      <button class="xfilter-btn" pButton type="button" icon="pi pi-times"
+              (click)="removeTypeFilter(selectedType)"></button>
     </div>
 
     <button pButton type="button" icon="pi pi-sliders-v"

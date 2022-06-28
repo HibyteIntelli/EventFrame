@@ -8,7 +8,7 @@
   height: 4rem;
 }
 
-.styled-btn:hover {
+.styled-btn:hover, .selectedCateg {
   color: white !important;
   background-color: #98d1e2 !important;
   border-radius: unset !important;
@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-.types-div:hover {
+.types-div:hover, .selectedTp {
   font-weight: bolder;
 }
 
