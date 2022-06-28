@@ -2,7 +2,7 @@ FROM node:16-alpine as builder
 
 ARG branchName
 ARG tagName
-RUN apk update && apk add --no-cache make python2 g++
+RUN apk add --no-cache python3 py3-pip make g++
 RUN apk add --no-cache bash git openssh
 
 WORKDIR /app
