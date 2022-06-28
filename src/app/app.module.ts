@@ -4,13 +4,12 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {EventCardComponent} from './components/event-card/event-card.component';
+import {CarouselEventCardComponent} from './components/carousel-event-card/carousel-event-card.component';
 import {ButtonModule} from "primeng/button";
 import {CardModule} from "primeng/card";
 import {CarouselModule} from "primeng/carousel";
-import {EventDetailedCardComponent} from './components/event-detailed-card/event-detailed-card.component';
-import {DetailedCardListComponent} from './components/detailed-card-list/detailed-card-list.component';
-import {CardsExampleComponent} from './components/cards-example/cards-example.component';
+import {EventCardComponent} from './components/event-card/event-card.component';
+import {CardListComponent} from './components/card-list/card-list.component';
 import {CarouselCardListComponent} from './components/carousel-card-list/carousel-card-list.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthorizationInterceptor} from "./providers/authorization.interceptor";
@@ -19,10 +18,9 @@ import {PaginatorModule} from 'primeng/paginator';
 @NgModule({
   declarations: [
     AppComponent,
+    CarouselEventCardComponent,
     EventCardComponent,
-    EventDetailedCardComponent,
-    DetailedCardListComponent,
-    CardsExampleComponent,
+    CardListComponent,
     CarouselCardListComponent
   ],
   imports: [

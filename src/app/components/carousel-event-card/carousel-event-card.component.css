@@ -1,0 +1,99 @@
+:host ::ng-deep .event-card {
+  max-width: 24rem;
+  background: #F7F7F7;
+  border-radius: unset;
+  box-shadow: 10px 10px 10px #00000029;
+  opacity: 1;
+}
+:host ::ng-deep .p-card-header {
+  background: #98D1E2;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 1.5rem 1.17rem;
+  align-items: center;
+}
+:host ::ng-deep .p-card .p-card-content {
+  padding: 0;
+  color: #333333;
+}
+:host ::ng-deep .p-card .p-card-body {
+  padding: 2.75rem 0.5rem 1.25rem 0.5rem;
+}
+:host ::ng-deep .p-carousel .p-carousel-indicators {
+  padding: 0;
+  align-items: center;
+}
+:host ::ng-deep .p-carousel-prev {
+  align-self: center;
+}
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+  margin: -2rem 0 0!important;
+}
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next:enabled:hover  {
+  background: none;
+}
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 25px;
+  background: #33333372;
+}
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  background-color: #333333;
+  width: 0.6rem;
+  height: 0.6rem;
+}
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button:focus  {
+  box-shadow: none;
+}
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button:hover {
+  box-shadow: none;
+}
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:focus, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next:focus {
+  box-shadow: none;
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 0.8rem;
+}
+.event-item {
+  padding: 0 0.5rem;
+}
+:host ::ng-deep .p-carousel .pi {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.btn-container {
+  display: flex;
+  justify-content: end;
+  padding: 3rem 0 1rem;
+}
+.event-title {
+  padding-top: 2.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  :host ::ng-deep .p-card-header {
+    padding: 12px;
+  }
+  :host ::ng-deep .p-card .p-card-body {
+    padding: 30px 0 15px 0;
+  }
+  :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+    margin: -48px 0 0!important;
+  }
+  .info-row {
+    padding-bottom: 8px;
+  }
+  .event-title {
+    padding-top: 28px;
+  }
+  .btn-container {
+    justify-content: center;
+    padding: 30px 0;
+  }
+}

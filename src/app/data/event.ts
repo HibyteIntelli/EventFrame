@@ -1,3 +1,16 @@
+export enum EventCategory {
+  highlights = 'HIGHLIGHTS',
+  arbeitsrecht = 'ARBEITSRECHT',
+  hr = 'HR&RECRUITING',
+  partnerevents = 'PARTNEREVENTS'
+}
+
+export enum EventType {
+  workshop = 'WORKSHOP',
+  event = 'EVENT',
+  seminar = 'SEMINAR',
+}
+
 export interface Event {
   id: number;
   description: string;
@@ -5,6 +18,6 @@ export interface Event {
   location: string;
   startDate: string;
   startHour: string;
-  type: string;
-  category: string;
+  type: EventType;
+  category: EventCategory;
 }

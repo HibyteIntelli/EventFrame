@@ -1,0 +1,47 @@
+<div>
+  <div class="p-pt-3 p-pb-3 text-center btn-container category-container">
+    <button *ngFor="let category of categories" pButton class="styled-btn"
+            type="button"
+            label="{{category.label}}"
+            (click)="filterByCategory(category.type)">
+    </button>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="categories-container">
+    <button *ngIf="sorting === 'desc'"
+            pButton type="button"
+            icon="pi pi-chevron-up"
+            label="Datum aufsteigend"
+            (click)="sortByDate()"
+            class="p-button-rounded p-button-secondary p-button-text"></button>
+
+    <button *ngIf="sorting === 'asc'"
+            pButton type="button"
+            icon="pi pi-chevron-down"
+            label="Datum absteigendes"
+            (click)="sortByDate()"
+            class="p-button-rounded p-button-secondary p-button-text"></button>
+
+    <div *ngIf="isTypeFilterVisible" fxLayout="row" fxLayoutAlign="space-around center" class="types-container">
+      <div class="types-div" *ngFor="let type of types" (click)="filterByType(type)">{{type}}</div>
+    </div>
+
+    <button pButton type="button" icon="pi pi-sliders-v"
+            class="p-button-secondary sliders-btn" (click)="showTypeFilters()"></button>
+  </div>
+
+  <div *ngIf="isTypeFilterVisible" fxLayout="row" fxLayoutAlign="space-around center" class="types-mobile-container">
+    <div class="types-div" *ngFor="let type of types" (click)="filterByType(type)">{{type}}</div>
+  </div>
+
+  <div *ngFor="let event of filteredEvents" fxLayout="column" fxLayoutAlign="space-around center">
+    <br>
+    <app-event-card [event]="event"></app-event-card>
+  </div>
+
+  <div class="paginator" *ngIf="allEvents?.length">
+    <div *ngFor="let page of [].constructor(pageCount); index as i" class="flex">
+      <h6 class="pointer" [class.blue-page]="selectedPage === i" (click)="changePage(i)">{{i + 1}}</h6>
+      <h6 class="ml-10 mr-10" *ngIf="i + 1 !== pageCount">|</h6>
+    </div>
+  </div>
+</div>
