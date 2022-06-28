@@ -1,5 +1,5 @@
 :host ::ng-deep .event-detailed-card {
-  width: 720px;
+  width: 44rem;
   background: #F7F7F7;
   border-radius: unset;
   padding-left: 1.8rem;
@@ -156,5 +156,10 @@
 
   :host ::ng-deep .event-detailed-card {
     width: 22rem!important;
+  }
+}
+@media only screen and (max-width: 880px) {
+  :host ::ng-deep .event-detailed-card {
+    width: 35rem;
   }
 }
