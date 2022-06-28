@@ -13,7 +13,7 @@ RUN npm install
 # check what files need to be copied
 COPY . /app
 
-RUN export NODE_OPTIONS=--openssl-legacy-provider && npm install -g @angular/cli && ng build && npm install --ignore-scripts --prefer-offline
+RUN npm install -g @angular/cli && npm install --ignore-scripts --prefer-offline && ng build
 RUN cd /app && node --max_old_space_size=6000 node_modules/@angular/cli/bin/ng build EventFrame && ls -l -a && pwd
 RUN pwd && ls -l -a /app/dist/event-frame
 
