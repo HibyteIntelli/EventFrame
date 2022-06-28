@@ -10,12 +10,12 @@
     <ng-template let-event pTemplate="item">
       <div class="event-item">
         <div class="info-row">
-          <p class="f-700 card-text">{{event.title}}</p>
+          <p class="f-700 card-text">{{event?.type}}</p>
           <div class="info-row-date normal-bold">
-            <p class="card-text f-700">{{event.date}} | {{event.hour}} Uhr</p>
+            <p class="card-text f-700">{{event?.startDate | date: "dd.MM.yyyy | h:mm" }} Uhr</p>
           </div>
         </div>
-        <p class="card-text text-left event-title">Titel des Events</p>
+        <p class="card-text text-left event-title">{{event?.name}}</p>
         <div class="btn-container">
           <button pButton
                   type="button"
