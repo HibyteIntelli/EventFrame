@@ -1,11 +1,16 @@
+.container {
+  width: 44rem;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .styled-btn {
-  margin: 8px;
   color: black;
   background-color: #d0eaf2 !important;
   border-radius: unset !important;
   border-color: transparent;
-  width: 15rem;
-  height: 4rem;
+  padding: 1rem 2rem;
 }
 
 .styled-btn:hover {
@@ -69,8 +74,6 @@
 .categories-container {
   display: flex !important;
   justify-content: space-between !important;
-  width: 720px;
-  margin: auto;
 }
 
 .types-mobile-container {
@@ -98,15 +101,19 @@
   border-color: transparent;
 }
 
+.btn-container {
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 480px) {
-  .category-container {
-    display: grid;
-    width: 100%;
+  .container {
+    width: 22rem!important;
   }
 
-  .styled-btn {
-    height: auto;
-    width: auto !important;
+  .category-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .types-container {
@@ -120,5 +127,21 @@
 
   .categories-container {
     width: 100% !important;
+  }
+  .styled-btn {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .container {
+    width: 35rem;
+  }
+
+  .category-container {
+    text-align: left;
+  }
+
+  .styled-btn {
+    padding: 0.5rem;
   }
 }
