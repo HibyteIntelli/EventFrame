@@ -3,7 +3,7 @@
     <button *ngFor="let category of categories" pButton class="styled-btn"
             type="button"
             label="{{category.label}}"
-            [class.selectedCateg]="(selectedCategory | uppercase) === category.label"
+            [class.selectedCateg]="(selectedCategory | uppercase) === category.label.replace(' ', '')"
             (click)="filterByCategory(category.type)">
     </button>
   </div>
@@ -26,7 +26,7 @@
       <div class="types-div" *ngFor="let type of types" [class.selectedTp]="selectedType === type"
            (click)="filterByType(type)">{{type}}</div>
       <button class="xfilter-btn" pButton type="button" icon="pi pi-times"
-              (click)="removeTypeFilter(selectedType)"></button>
+              (click)="removeTypeFilter()"></button>
     </div>
 
     <button pButton type="button" icon="pi pi-sliders-v"
