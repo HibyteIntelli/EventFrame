@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {EventsService} from "../../services/events.service";
-import {Event} from "../../data/event";
+import {Event, EventCategory} from "../../data/event";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -10,7 +10,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class CarouselCardListComponent implements OnInit {
 
-  events: Event[];
+  events: Event[] = [];
 
   constructor(private eventService: EventsService, private route: ActivatedRoute) {
   }
@@ -19,16 +19,31 @@ export class CarouselCardListComponent implements OnInit {
     const routeType = this.route.snapshot.queryParams['type'];
     const routeCategory = this.route.snapshot.queryParams['category'];
 
-    this.eventService.getAllEvents().subscribe(events => {
-      this.events = events;
+    if (routeType) {
+      const splittedTypes = routeType.split(",", 3);
+      this.eventService.getAllEvents().subscribe(events => {
+        let unfilteredEvents = events;
+        splittedTypes.forEach(type => {
+          const evs = unfilteredEvents?.filter(event => event.type === type);
+          this.events = this.events.concat(evs);
+        });
+      });
+    }
 
-      if(routeType) {
-        this.events = this.events?.filter(event => event.type === routeType);
-      }
-
-      if(routeCategory) {
-        this.events = this.events?.filter(event => event.category === routeCategory);
-      }
-    });
+    if (routeCategory) {
+      const splittedCategories = routeCategory.split(",", 4);
+      this.eventService.getAllEvents().subscribe(events => {
+        let unfilteredEvents = events;
+        let evs: Event[] = [];
+        splittedCategories.forEach(category => {
+          if (category == 'HR') {
+            evs = unfilteredEvents?.filter(event => event.category == EventCategory.hr);
+          } else {
+            evs = unfilteredEvents?.filter(event => event.category === category);
+          }
+          this.events = this.events.concat(evs);
+        });
+      });
+    }
   }
 }
