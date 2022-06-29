@@ -1,8 +1,8 @@
 export enum EventCategory {
-  highlights = 'HIGHLIGHTS',
-  arbeitsrecht = 'ARBEITSRECHT',
-  hr = 'HR&RECRUITING',
-  partnerevents = 'PARTNEREVENTS'
+  highlights = 'Highlights',
+  arbeitsrecht = 'Arbeitsrecht',
+  hr = 'HR&Recruiting',
+  partnerevents = 'Partnerevents'
 }
 
 export enum EventType {
