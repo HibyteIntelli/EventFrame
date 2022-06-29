@@ -18,7 +18,7 @@ export class CardListComponent implements OnInit {
   }, {label: 'HR&RECRUITING', type: EventCategory.hr}, {
     label: 'HIGHLIGHTS',
     type: EventCategory.highlights
-  }, {label: 'PARTNEREVENTS', type: EventCategory.partnerevents}];
+  }, {label: 'PARTNER EVENTS', type: EventCategory.partnerevents}];
   types: EventType[] = [EventType.event, EventType.seminar, EventType.workshop];
   isTypeFilterVisible: boolean = false;
   selectedCategory: string;
@@ -36,13 +36,10 @@ export class CardListComponent implements OnInit {
 
     this.eventService.getAllEvents().subscribe(events => {
       this.allEvents = events;
-
       if (routeType) {
-        this.events = this.allEvents?.filter(event => event.type === routeType);
+        this.events = this.allEvents?.filter(event => event.type?.replace(' ', '') === routeType);
         this.selectedType = routeType;
-      }
-
-      if (routeCategory) {
+      } else if (routeCategory) {
         if (routeCategory == 'HR') {
           this.events = this.allEvents?.filter(event => event.category == EventCategory.hr);
           this.selectedCategory = EventCategory.hr;
@@ -50,8 +47,9 @@ export class CardListComponent implements OnInit {
           this.events = this.allEvents?.filter(event => event.category === routeCategory);
           this.selectedCategory = routeCategory;
         }
+      } else {
+        this.events = events;
       }
-
       this.events = this.events.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
       this.calculatePageCount();
       this.paginateData(0);
@@ -112,11 +110,11 @@ export class CardListComponent implements OnInit {
     this.paginateData(0);
   }
 
-  removeTypeFilter(type: string) {
+  removeTypeFilter() {
     this.events = this.allEvents.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
     this.calculatePageCount();
     this.paginateData(0);
     this.selectedPage = 0;
-    this.selectedType = type;
+    this.selectedType = '';
   }
 }

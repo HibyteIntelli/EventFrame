@@ -21,14 +21,6 @@
   box-shadow: unset;
 }
 
-.styled-btn:focus {
-  color: white !important;
-  background-color: #98d1e2 !important;
-  border-radius: unset !important;
-  border-color: transparent;
-  box-shadow: unset;
-}
-
 .sliders-btn {
   color: black;
   background-color: white !important;
