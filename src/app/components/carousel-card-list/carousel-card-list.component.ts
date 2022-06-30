@@ -28,9 +28,7 @@ export class CarouselCardListComponent implements OnInit {
           this.events = this.events.concat(evs);
         });
       });
-    }
-
-    if (routeCategory) {
+    } else if (routeCategory) {
       const splittedCategories = routeCategory.split(",", 4);
       this.eventService.getAllEvents().subscribe(events => {
         let unfilteredEvents = events;
@@ -43,6 +41,10 @@ export class CarouselCardListComponent implements OnInit {
           }
           this.events = this.events.concat(evs);
         });
+      });
+    } else {
+      this.eventService.getAllEvents().subscribe(events => {
+        this.events = events;
       });
     }
   }
