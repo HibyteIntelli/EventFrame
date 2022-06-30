@@ -22,7 +22,7 @@ export class CardListComponent implements OnInit {
   types: EventType[] = [EventType.event, EventType.seminar, EventType.workshop];
   isTypeFilterVisible: boolean = false;
   selectedCategory: string;
-  sorting: 'desc' | 'asc' = 'desc';
+  sorting: 'desc' | 'asc' = 'asc';
   selectedType: string;
   pageCount: number;
   selectedPage = 0;
@@ -50,7 +50,7 @@ export class CardListComponent implements OnInit {
       } else {
         this.events = events;
       }
-      this.events = this.events.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
+      this.events = this.events.sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime());
       this.calculatePageCount();
       this.paginateData(0);
     });
