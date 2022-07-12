@@ -1,0 +1,49 @@
+:host ::ng-deep .event-large-card {
+  max-width: 77rem;
+  background: #F7F7F7;
+  border-radius: unset;
+  padding-left: 4.3rem;
+  padding-right: 4.3rem;
+  box-shadow: 10px 10px 10px #00000029;
+}
+
+:host ::ng-deep .p-card-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-transform: uppercase;
+  padding-right: 4.7rem;
+}
+
+.tag-text {
+  margin: 0;
+}
+
+:host ::ng-deep .p-card .p-card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+:host ::ng-deep .p-card .p-card-content {
+  padding: unset;
+}
+
+:host ::ng-deep .p-card .p-card-body {
+  padding: 0 2rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+  border-bottom: 2px solid #333333;
+  padding: 2rem 0 0.5rem 0;
+}
+
+.info-row-date {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

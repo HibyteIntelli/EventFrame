@@ -14,6 +14,7 @@ import {CarouselCardListComponent} from './components/carousel-card-list/carouse
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthorizationInterceptor} from "./providers/authorization.interceptor";
 import {PaginatorModule} from 'primeng/paginator';
+import { EventLargeCardComponent } from './components/event-large-card/event-large-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {PaginatorModule} from 'primeng/paginator';
     CarouselEventCardComponent,
     EventCardComponent,
     CardListComponent,
-    CarouselCardListComponent
+    CarouselCardListComponent,
+    EventLargeCardComponent
   ],
   imports: [
     BrowserModule,

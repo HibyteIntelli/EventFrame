@@ -91,7 +91,7 @@ export class CardListComponent implements OnInit {
       this.events = this.allEvents.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
       this.selectedType = "";
     } else {
-      this.events = this.allEvents.filter(event => event.type === type);
+      this.events = this.allEvents?.filter(event => event.type === type);
       this.selectedType = type;
     }
     this.calculatePageCount();
