@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  authUrl: 'https://api.dev.si-nect-portal.de:4000/auth/api-key',
-  apiKey: 'd69b5b1a-b422-4f67-bf32-6a75bcfb5a2c',
-  apiUrl: 'https://api.dev.si-nect-portal.de:4000/agv'
+  authUrl: 'https://dev.si-nect-api.de/agv/auth/api-key',
+  apiKey: '272ede51-7d74-4b24-bd95-ff0f60d17e3f',
+  apiUrl: 'https://dev.si-nect-api.de/agv'
 };
 
 /*
