@@ -17,7 +17,7 @@ export class CarouselEventCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToEvent() {
-
+  goToEvent(id: number) {
+    this.router.navigate(['event/',id]);
   }
 }

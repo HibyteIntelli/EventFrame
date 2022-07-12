@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Event,  EventCategory} from "../../data/event";
+import {Event, EventCategory} from "../../data/event";
 import {EventsService} from "../../services/events.service";
+import {ActivatedRoute} from "@angular/router";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-event-large-card',
@@ -9,19 +11,16 @@ import {EventsService} from "../../services/events.service";
 })
 export class EventLargeCardComponent implements OnInit {
 
-
-  events: Event[];
   EventCategory = EventCategory;
   event: Event;
-  constructor(private eventService: EventsService) { }
 
-  ngOnInit(): void {
-    this.eventService.getEventById(1).subscribe(event => {
-      this.event = event;
-    })
-    console.log(this.event)
+  constructor(private eventService: EventsService, private route: ActivatedRoute) {
   }
 
-
+  ngOnInit(): void {
+    this.eventService.getEventById(this.route.snapshot.params['id']).subscribe(event => {
+      this.event = event;
+    })
+  }
 
 }
