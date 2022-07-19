@@ -8,7 +8,7 @@ import {EventLargeCardComponent} from "./components/event-large-card/event-large
 const routes: Routes = [
   {path: 'carousel', component: CarouselCardListComponent, canActivate: [AuthorizationGuard]},
   {path: 'events', component: CardListComponent, canActivate: [AuthorizationGuard]},
-  {path:'event/:id', component: EventLargeCardComponent, canActivate: [AuthorizationGuard]},
+  {path:'event/:id/target/carousel', component: EventLargeCardComponent, canActivate: [AuthorizationGuard]},
 ];
 
 @NgModule({
