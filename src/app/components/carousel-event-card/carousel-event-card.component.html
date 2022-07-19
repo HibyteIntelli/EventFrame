@@ -17,7 +17,7 @@
         </div>
         <p class="card-text text-left event-title">{{event?.name}}</p>
         <div class="btn-container">
-          <a target="_parent" [routerLink]="['/event', event.id]"
+          <a target="_parent" [routerLink]="['/event-detail']" [queryParams]="{event_id: event.id}"
             class="target-button rounded-button turqoise turqoise-hover">Zum Event</a>
         </div>
       </div>

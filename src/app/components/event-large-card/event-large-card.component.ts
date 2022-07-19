@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Event, EventCategory} from "../../data/event";
 import {EventsService} from "../../services/events.service";
 import {ActivatedRoute} from "@angular/router";
-import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-event-large-card',
@@ -18,7 +17,7 @@ export class EventLargeCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.eventService.getEventById(this.route.snapshot.params['id']).subscribe(event => {
+    this.eventService.getEventById(this.route.snapshot.queryParams['event_id']).subscribe(event => {
       this.event = event;
     })
   }
