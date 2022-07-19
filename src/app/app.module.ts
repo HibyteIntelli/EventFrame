@@ -23,7 +23,7 @@ import { EventLargeCardComponent } from './components/event-large-card/event-lar
     EventCardComponent,
     CardListComponent,
     CarouselCardListComponent,
-    EventLargeCardComponent
+    EventLargeCardComponent,
   ],
   imports: [
     BrowserModule,

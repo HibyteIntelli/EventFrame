@@ -17,11 +17,8 @@
         </div>
         <p class="card-text text-left event-title">{{event?.name}}</p>
         <div class="btn-container">
-          <button pButton
-                  type="button"
-                  label="Zum Event"
-                  class="rounded-button turqoise turqoise-hover"
-                  (click)="goToEvent(event?.id)"></button>
+          <a target="_parent" [routerLink]="['/event', event.id]"
+            class="target-button rounded-button turqoise turqoise-hover">Zum Event</a>
         </div>
       </div>
     </ng-template>
