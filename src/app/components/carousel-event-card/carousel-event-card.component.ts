@@ -18,6 +18,6 @@ export class CarouselEventCardComponent implements OnInit {
   }
 
   goToEvent(id: number) {
-    this.router.navigate(['event/',id]);
+    this.router.navigate([`event/${id}/target/carousel`]);
   }
 }
