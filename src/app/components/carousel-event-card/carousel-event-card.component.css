@@ -75,10 +75,6 @@
 .event-title {
   padding-top: 2.5rem;
 }
-.target-button {
-  padding: 0.4rem 1rem;
-  text-decoration: none;
-}
 
 @media only screen and (max-width: 480px) {
   :host ::ng-deep .p-card-header {

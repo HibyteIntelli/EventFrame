@@ -219,6 +219,11 @@ h6 {
   box-shadow: 0 10px 10px #00000029;
 }
 
+.target-button {
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 480px) {
   p {
     font-size: 14px;

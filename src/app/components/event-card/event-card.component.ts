@@ -24,13 +24,4 @@ export class EventCardComponent implements OnInit {
       this.mobile = true;
     }
   }
-
-  showEventDetails() {
-    this.showDetails=!this.showDetails;
-    if(this.showDetails) {
-      this.showDetailsButtonText='^';
-    } else {
-      this.showDetailsButtonText='Mehr erfahren';
-    }
-  }
 }
