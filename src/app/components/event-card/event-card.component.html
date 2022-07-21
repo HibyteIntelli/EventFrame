@@ -2,10 +2,10 @@
         header="{{event?.type}}">
   <ng-template pTemplate="header">
     <div class="small-rectangle"
-    [class.green]="event.category === EventCategory.arbeitsrecht"
-    [class.yellow]="event.category === EventCategory.hr"
-    [class.red]="event.category === EventCategory.highlights"
-    [class.blue]="event.category === EventCategory.partnerevents">
+         [class.green]="event.category === EventCategory.arbeitsrecht"
+         [class.yellow]="event.category === EventCategory.hr"
+         [class.red]="event.category === EventCategory.highlights"
+         [class.blue]="event.category === EventCategory.partnerevents">
       <p class="tag-text white">{{event?.category}}</p>
     </div>
   </ng-template>
@@ -25,19 +25,8 @@
       <button pButton type="button" label="ZUM EVENT" class="rounded-button turqoise"></button>
     </div>
     <div class="p-pt-3 p-pb-3 text-center btn-container">
-      <button pButton *ngIf="!this.showDetails"
-              type="button"
-              label="Mehr erfahren"
-              class="rounded-button turqoise"
-              (click)="showEventDetails()">
-      </button>
-
-        <button pButton *ngIf="this.showDetails"
-                type="button"
-                icon="pi pi-chevron-up" iconPos="left"
-                class="rounded-button turqoise"
-                (click)="showEventDetails()">
-        </button>
+      <a target="_parent" href="https://dev.codelords.de/agv-bs/event-detail/?event_id={{event.id}}"
+         class="target-button rounded-button turqoise turqoise-hover">Zum Event</a>
     </div>
   </div>
 </p-card>
