@@ -3,76 +3,60 @@
 @import '~primeng/resources/primeng.min.css';
 @import "assets/theme/theme.css";
 @import 'assets/scss/modules/_fonts.scss';
-
 body {
   font: normal normal normal 17px/24px Fira Sans, Arial, Helvetica, sans-serif;
 }
-
 p {
   font: normal normal normal 17px/24px Fira Sans, Arial, Helvetica, sans-serif;
   margin: 0;
 }
-
 h1 {
   font: normal normal 600 56px/67px Fira Sans, Arial, Helvetica, sans-serif;
 }
-
 h2 {
   font: normal normal 600 43px/51px Fira Sans, Arial, Helvetica, sans-serif;
 }
-
 h3 {
   font: normal normal 600 34px/41px Fira Sans, Arial, Helvetica, sans-serif;
 }
-
 h4 {
   font: normal normal 600 26px/31px Fira Sans, Arial, Helvetica, sans-serif;
   margin: 0;
 }
-
 h5 {
   font: normal normal 22px/31px Fira Sans, Arial, Helvetica, sans-serif;
   margin: 0;
 }
-
 h6 {
   font: normal normal 18px/21px Fira Sans, Arial, Helvetica, sans-serif;
   margin: 0;
 }
-
 .card-text {
   font: normal normal 15px/18px Fira Sans, Arial, Helvetica, sans-serif;
 }
-
 .f-700 {
   font-weight: 700;
 }
-
 .f-300 {
   font-weight: 300;
 }
-
 .normal-bold {
   font: normal normal bold 15px/21px Fira Sans, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
-
 .text-left {
   text-align: left;
   letter-spacing: 0;
 }
-
 .text-link {
   font: normal normal 300 15px/21px Fira Sans, Arial, Helvetica, sans-serif;
   color: white;
   cursor: pointer;
 }
-
 .small-rectangle {
   padding: 0.6rem 1.8rem;
   text-align: center;
 }
-
 .height-rectangle {
   height: 15rem;
   width: 23%;
@@ -82,171 +66,133 @@ h6 {
   padding: 0.8rem;
   margin-bottom: 1rem;
 }
-
 .blue {
   background: #4E8AB4;
   opacity: 1;
 }
-
 .blue-page {
   color: #98D1E2;
 }
-
 .blue:hover {
   background: #B0CADD;
   opacity: 1;
 }
-
 .green {
   background: #7BB7AE;
   opacity: 1;
 }
-
 .yellow {
   background: #d8dc8f;
   opacity: 1;
 }
-
 .blue {
   background: #A4C2DB;
   opacity: 1;
 }
-
 .red {
   background: #f2938d;
   opacity: 1;
 }
-
 .turqoise {
   background: #98D1E2;
   border: 1px solid #98D1E2;
 }
-
 .turqoise-light {
   background: #D0EAF2;
 }
-
 .rounded-button {
   color: #FFFFFF;
   font-weight: 500;
   box-shadow: 0 10px 10px #00000029;
   border-radius: 25px;
 }
-
 .p-p-3 {
   padding: 1rem;
 }
-
 .p-pb-3 {
   padding-bottom: 1rem;
 }
-
 .p-pb-4 {
   padding-bottom: 1.5rem;
 }
-
 .p-pb-5 {
   padding-bottom: 2rem;
 }
-
 .p-pt-7 {
   padding-top: 3rem;
 }
-
 .p-pt-5 {
   padding-top: 2rem;
 }
-
 .p-pt-3 {
   padding-top: 1rem;
 }
-
 .p-pt-4 {
   padding-top: 1.5rem
 }
-
 .p-pr-1 {
   padding-right: 0.5rem;
 }
-
 .p-pr-2 {
   padding-right: 0.75rem;
 }
-
 .p-pr-3 {
   padding-right: 1rem
 }
-
 .ml-10 {
   margin-left: 10px;
 }
-
 .mr-10 {
   margin-right: 10px;
 }
-
 .text-center {
   text-align: center;
 }
-
 .flex {
   display: flex;
 }
-
 .center {
   align-items: center;
 }
-
 .uppercase {
   text-transform: uppercase;
 }
-
 .white {
   color: white;
 }
-
 .pointer {
   cursor: pointer;
 }
-
 .turqoise:hover {
   background: transparent !important;
   border: 1px solid #98D1E2 !important;
   color: #98D1E2 !important;
 }
-
 .turqoise:focus {
   box-shadow: 0 10px 10px #00000029;
 }
-
 .target-button {
   padding: 0.4rem 1rem;
   text-decoration: none;
 }
-
 @media only screen and (max-width: 480px) {
   p {
     font-size: 14px;
     line-height: 20px;
   }
-
   h5 {
     font: normal normal 500 14px/20px Fira Sans, Arial, Helvetica, sans-serif;
   }
-
   .rounded-button {
     font-size: 15px;
   }
-
   .text-link {
     font: normal normal normal 12px/17px Fira Sans, Arial, Helvetica, sans-serif;
   }
-
   .card-text {
     font-size: 12px;
     line-height: 18px;
   }
-
   .height-rectangle {
     height: 200px;
     width: 48%;
