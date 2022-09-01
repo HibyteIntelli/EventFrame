@@ -57,11 +57,11 @@ export class CardListComponent implements OnInit {
   }
 
   calculatePageCount() {
-    this.pageCount = Math.ceil(this.events.length / 4);
+    this.pageCount = Math.ceil(this.events.length / 5);
   }
 
   paginateData(fromIndex: number) {
-    this.filteredEvents = this.events.slice(fromIndex, fromIndex + 4);
+    this.filteredEvents = this.events.filter(event => event.visibility === 1 || event.web_visibility === 1).slice(fromIndex, fromIndex + 4);
   }
 
   changePage($event) {
@@ -116,5 +116,9 @@ export class CardListComponent implements OnInit {
     this.paginateData(0);
     this.selectedPage = 0;
     this.selectedType = '';
+  }
+
+  someFunction(arr: any[]){
+    return arr.map(o => o.visibility);
   }
 }

@@ -20,4 +20,6 @@ export interface Event {
   startHour: string;
   type: EventType;
   category: EventCategory;
+  visibility: number;
+  web_visibility: number;
 }

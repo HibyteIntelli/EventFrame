@@ -37,10 +37,13 @@
     <div class="types-div" *ngFor="let type of types" (click)="filterByType(type)">{{type}}</div>
   </div>
 
-  <div *ngFor="let event of filteredEvents" fxLayout="column" fxLayoutAlign="space-around center">
-    <app-event-card [event]="event"
-                    [style]="'width:100%;'"></app-event-card>
+
+    <div *ngFor="let event of filteredEvents" fxLayout="column" fxLayoutAlign="space-around center">
+      <app-event-card [event]="event"
+                      [style]="'width:100%;'"></app-event-card>
   </div>
+
+
 
   <div class="paginator" *ngIf="allEvents?.length">
     <div *ngFor="let page of [].constructor(pageCount); index as i" class="flex">

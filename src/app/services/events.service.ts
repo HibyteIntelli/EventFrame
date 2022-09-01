@@ -23,7 +23,9 @@ export class EventsService {
           startHour: event.e_s_hour,
           location: event.e_city,
           type: event.e_event_type,
-          category: event.e_category
+          category: event.e_category,
+          visibility: event.e_visible,
+          web_visibility: event.e_website_visibility
         }))));
   }
 
@@ -38,7 +40,9 @@ export class EventsService {
         startHour: event.e_s_hour,
         location: event.e_city,
         type: event.e_event_type,
-        category: event.e_category
+        category: event.e_category,
+        visibility: event.e_visible,
+        web_visibility: event.e_website_visibility
       })));
   }
 }

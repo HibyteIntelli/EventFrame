@@ -20,7 +20,7 @@ export class EventCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (window.screen.width <=480) {
+    if (window.screen.width <= 480) {
       this.mobile = true;
     }
   }
