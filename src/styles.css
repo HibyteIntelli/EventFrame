@@ -5,6 +5,7 @@
 @import 'assets/scss/modules/_fonts.scss';
 body {
   font: normal normal normal 17px/24px Fira Sans, Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 p {
   font: normal normal normal 17px/24px Fira Sans, Arial, Helvetica, sans-serif;

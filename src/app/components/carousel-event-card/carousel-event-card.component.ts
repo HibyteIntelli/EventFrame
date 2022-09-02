@@ -10,10 +10,15 @@ import {Router} from "@angular/router";
 export class CarouselEventCardComponent implements OnInit {
   @Input()
   events: Event[];
+  filteredCarousel: Event[];
 
   constructor(private router: Router) {
   }
 
   ngOnInit(): void {
+  }
+
+  getFilteredCarousel(): Event[] {
+    return this.events.filter(event => event.visibility === 1 || event.web_visibility === 1);
   }
 }

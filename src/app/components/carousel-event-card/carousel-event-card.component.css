@@ -1,24 +1,18 @@
 :host ::ng-deep .event-card {
-  max-width: 24rem;
+  max-width: 100%;
   background: #F7F7F7;
   border-radius: unset;
-  box-shadow: 10px 10px 10px #00000029;
   opacity: 1;
-}
-:host ::ng-deep .p-card-header {
-  background: #98D1E2;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  padding: 1.5rem 1.17rem;
-  align-items: center;
+  height: 100vh;
 }
 :host ::ng-deep .p-card .p-card-content {
   padding: 0;
   color: #333333;
+  height: 100%;
 }
 :host ::ng-deep .p-card .p-card-body {
-  padding: 2.75rem 0.5rem 1.25rem 0.5rem;
+  padding: 1.75rem 0.5rem 1.25rem 0.5rem;
+  height: 100%;
 }
 :host ::ng-deep .p-carousel .p-carousel-indicators {
   padding: 0;
@@ -27,8 +21,21 @@
 :host ::ng-deep .p-carousel-prev {
   align-self: center;
 }
+:host ::ng-deep .p-carousel-content {
+  height: 100%;
+  justify-content: space-between;
+}
+:host ::ng-deep .p-carousel {
+  height: 100%;
+}
+:host ::ng-deep .p-carousel-container {
+  height: 100%;
+}
+:host ::ng-deep .p-carousel-items-container {
+  height: 100%;
+}
 :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
-  margin: -2rem 0 0!important;
+  margin: 0!important;
 }
 :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover, :host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next:enabled:hover  {
   background: none;
@@ -62,6 +69,11 @@
 }
 .event-item {
   padding: 0 0.5rem;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
 }
 :host ::ng-deep .p-carousel .pi {
   font-size: 0.7rem;
@@ -70,10 +82,18 @@
 .btn-container {
   display: flex;
   justify-content: end;
-  padding: 3rem 0 1rem;
+  padding: 1rem 0;
 }
-.event-title {
-  padding-top: 2.5rem;
+.target-button {
+  position: absolute;
+  bottom: 1.5rem;
+}
+.text-container p {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 480px) {
@@ -88,9 +108,6 @@
   }
   .info-row {
     padding-bottom: 8px;
-  }
-  .event-title {
-    padding-top: 28px;
   }
   .btn-container {
     justify-content: center;
