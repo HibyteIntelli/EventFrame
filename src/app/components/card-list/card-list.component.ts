@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {EventsService} from '../../services/events.service';
 import {Event, EventCategory, EventType} from '../../data/event';
 import {ActivatedRoute} from "@angular/router";
+import * as events from "events";
+import {from} from "rxjs";
 
 @Component({
   selector: 'app-card-list',
@@ -51,17 +53,17 @@ export class CardListComponent implements OnInit {
         this.events = events;
       }
       this.events = this.events.sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime());
-      this.calculatePageCount();
       this.paginateData(0);
+      this.calculatePageCount();
     });
-  }
-
-  calculatePageCount() {
-    this.pageCount = Math.ceil(this.events.length / 5);
   }
 
   paginateData(fromIndex: number) {
     this.filteredEvents = this.events.filter(event => event.visibility === 1 && event.web_visibility === 1).slice(fromIndex, fromIndex + 4);
+  }
+
+  calculatePageCount() {
+    this.pageCount = Math.ceil (this.events.filter(event => event.visibility === 1 && event.web_visibility === 1).length / 4);
   }
 
   changePage($event) {
@@ -81,8 +83,8 @@ export class CardListComponent implements OnInit {
       this.events = this.allEvents?.filter(event => event.category === category);
       this.selectedCategory = category;
     }
-    this.calculatePageCount();
     this.paginateData(0);
+    this.calculatePageCount();
     this.selectedPage = 0;
   }
 
@@ -112,8 +114,8 @@ export class CardListComponent implements OnInit {
 
   removeTypeFilter() {
     this.events = this.allEvents.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
-    this.calculatePageCount();
     this.paginateData(0);
+    this.calculatePageCount();
     this.selectedPage = 0;
     this.selectedType = '';
   }
