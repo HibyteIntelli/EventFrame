@@ -61,7 +61,7 @@ export class CardListComponent implements OnInit {
   }
 
   paginateData(fromIndex: number) {
-    this.filteredEvents = this.events.filter(event => event.visibility === 1 || event.web_visibility === 1).slice(fromIndex, fromIndex + 4);
+    this.filteredEvents = this.events.filter(event => event.visibility === 1 && event.web_visibility === 1).slice(fromIndex, fromIndex + 4);
   }
 
   changePage($event) {
