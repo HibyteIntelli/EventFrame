@@ -12,7 +12,7 @@ export class CarouselEventCardComponent implements OnInit {
   @Input() events: Event[];
   filteredCarousel: Event[];
   filteredEvents: Event[] = [];
-  currentPage: number = 1;
+  currentPage: number = 0;
 
   constructor(public sanitizer: DomSanitizer) {
   }
@@ -24,8 +24,16 @@ export class CarouselEventCardComponent implements OnInit {
     return this.events.filter(event => event.visibility === 1 && event.web_visibility === 1);
   }
 
-  isEven(number: number) {
-    return Math.abs(number);
+  changeImage($event) {
+    this.currentPage = $event.page;
+  }
+
+  getSrc() {
+    if (Math.abs(this.currentPage % 2) === 1) {
+      return 'https://dev.codelords.de/agv-bs/wp-content/uploads/Bildschirmfoto-2022-08-09-um-12.15.03.png'
+    } else {
+      return 'https://dev.codelords.de/agv-bs/wp-content/uploads/Bildschirmfoto-2022-08-17-um-14.43.51.png';
+    }
   }
 
 }
