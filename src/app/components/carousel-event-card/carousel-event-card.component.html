@@ -7,7 +7,7 @@
               id="carousel">
     <ng-template let-event pTemplate="item">
       <div class="event-item">
-        <img src="{{getSrc()}}" class="bg-image">
+        <img [attr.src]="getImage(event)" class="bg-image" *ngIf="event?.web_logo">
         <div class="info-container">
           <div class="info-row">
             <p class="f-700 card-text white">{{event?.type}}</p>

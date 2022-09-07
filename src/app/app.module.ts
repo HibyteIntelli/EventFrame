@@ -15,7 +15,6 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthorizationInterceptor} from './providers/authorization.interceptor';
 import {PaginatorModule} from 'primeng/paginator';
 import {EventLargeCardComponent} from './components/event-large-card/event-large-card.component';
-import {ImagePipe} from './data/image.pipe';
 import {DatePipe} from '@angular/common';
 
 @NgModule({
@@ -26,7 +25,6 @@ import {DatePipe} from '@angular/common';
     CardListComponent,
     CarouselCardListComponent,
     EventLargeCardComponent,
-    ImagePipe,
   ],
   imports: [
     BrowserModule,

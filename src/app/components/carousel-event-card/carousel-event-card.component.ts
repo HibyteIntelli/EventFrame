@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Event} from "../../data/event";
-import {DomSanitizer} from '@angular/platform-browser';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-carousel-event-card',
@@ -27,13 +27,14 @@ export class CarouselEventCardComponent implements OnInit {
   changeImage($event) {
     this.currentPage = $event.page;
   }
-
-  getSrc() {
-    if (Math.abs(this.currentPage % 2) === 1) {
-      return 'assets/Bildschirmfoto-2022-08-17-um-14.43.51 (1).png'
-    } else {
-      return 'assets/L1120454.jpeg';
+  public getImage(event: Event): SafeResourceUrl {
+    var binary = '';
+    var bytes = new Uint8Array( event?.web_logo?.data );
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+      binary += String.fromCharCode( bytes[ i ] );
     }
+    return this.sanitizer.bypassSecurityTrustResourceUrl(`data:image/jpeg;base64,${binary}`)
   }
 
 }
