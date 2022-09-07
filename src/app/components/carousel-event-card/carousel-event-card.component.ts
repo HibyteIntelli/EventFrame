@@ -30,9 +30,9 @@ export class CarouselEventCardComponent implements OnInit {
 
   getSrc() {
     if (Math.abs(this.currentPage % 2) === 1) {
-      return 'https://dev.codelords.de/agv-bs/wp-content/uploads/Bildschirmfoto-2022-08-09-um-12.15.03.png'
+      return 'assets/Bildschirmfoto-2022-08-17-um-14.43.51 (1).png'
     } else {
-      return 'https://dev.codelords.de/agv-bs/wp-content/uploads/Bildschirmfoto-2022-08-17-um-14.43.51.png';
+      return 'assets/L1120454.jpeg';
     }
   }
 
