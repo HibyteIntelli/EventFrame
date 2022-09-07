@@ -76,6 +76,9 @@
   border-bottom: 2px solid white;
   padding-bottom: 0.8rem;
 }
+.event-title{
+  font-weight: 500;
+}
 .event-item {
   justify-content: space-between;
   display: flex;
