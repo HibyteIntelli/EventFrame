@@ -21,11 +21,17 @@ export class EventsService {
           description: event.e_desc,
           startDate: event.e_s_date,
           startHour: event.e_s_hour,
+          endHour: event.e_e_hour,
           location: event.e_city,
           type: event.e_event_type,
           category: event.e_category,
           visibility: event.e_visible,
-          web_visibility: event.e_website_visibility
+          web_visibility: event.e_website_visibility,
+          web_logo: event.e_website_logo,
+          zip: event.e_zip,
+          street: event.e_street,
+          city: event.e_city,
+          place: event.e_place
         }))));
   }
 
@@ -38,11 +44,21 @@ export class EventsService {
         description: event.e_desc,
         startDate: event.e_s_date,
         startHour: event.e_s_hour,
+        endHour: event.e_e_hour,
         location: event.e_city,
         type: event.e_event_type,
         category: event.e_category,
         visibility: event.e_visible,
-        web_visibility: event.e_website_visibility
+        web_visibility: event.e_website_visibility,
+        web_logo: event.e_website_logo,
+        zip: event.e_zip,
+        street: event.e_street,
+        city: event.e_city,
+        place: event.e_place
       })));
+  }
+
+  getEventPrice(eventId: number) {
+    return this.httpClient.get<any>(`${environment.apiUrl}/invoice-configs/event/${eventId}`);
   }
 }

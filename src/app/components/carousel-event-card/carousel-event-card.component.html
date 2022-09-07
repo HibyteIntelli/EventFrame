@@ -8,15 +8,15 @@
         <div class="info-row">
           <p class="f-700 card-text">{{event?.type}}</p>
           <div class="info-row-date normal-bold">
-            <p class="card-text f-700">{{event?.startDate | date: "dd.MM.yyyy | h:mm" }} Uhr</p>
+            <p class="card-text f-700">{{event?.startDate | date: "dd.MM.yyyy | HH:mm" }} Uhr</p>
           </div>
         </div>
         <div class="text-container">
-          <p class="card-text text-left event-title">{{event?.name}}</p>
+          <p class="card-text text-left event-title">{{event?.name.toUpperCase()}}</p>
         </div>
         <div class="btn-container">
           <a target="_parent" href="https://dev.codelords.de/agv-bs/event-detail/?event_id={{event.id}}"
-             class="target-button rounded-button turqoise turqoise-hover">Zum Event</a>
+             class="target-button rounded-button turqoise turqoise-hover">ZUM EVENT</a>
         </div>
       </div>
     </ng-template>

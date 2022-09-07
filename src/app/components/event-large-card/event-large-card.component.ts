@@ -12,6 +12,7 @@ export class EventLargeCardComponent implements OnInit {
 
   EventCategory = EventCategory;
   event: Event;
+  eventPrice: number;
 
   constructor(private eventService: EventsService, private route: ActivatedRoute) {
   }
@@ -19,7 +20,19 @@ export class EventLargeCardComponent implements OnInit {
   ngOnInit(): void {
     this.eventService.getEventById(this.route.snapshot.queryParams['event_id']).subscribe(event => {
       this.event = event;
+      this.getEventPrice();
     })
+  }
+
+  getEndTime(): string {
+    if (this.event?.endHour) {
+      return this.event?.endHour.slice(0, this.event.endHour?.length - 3);
+    }
+    return '';
+  }
+
+  getEventPrice() {
+    this.eventService.getEventPrice(this.event?.id).subscribe(response => this.eventPrice = response[0].ic_total_no_tax);
   }
 
 }

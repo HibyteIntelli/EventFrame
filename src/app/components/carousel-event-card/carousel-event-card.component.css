@@ -81,7 +81,7 @@
 }
 .btn-container {
   display: flex;
-  justify-content: end;
+  justify-content: start;
   padding: 1rem 0;
 }
 .target-button {
@@ -95,7 +95,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 @media only screen and (max-width: 480px) {
   :host ::ng-deep .p-card-header {
     padding: 12px;

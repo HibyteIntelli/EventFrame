@@ -18,8 +18,14 @@ export interface Event {
   location: string;
   startDate: string;
   startHour: string;
+  endHour: string;
   type: EventType;
   category: EventCategory;
   visibility: number;
   web_visibility: number;
+  web_logo: any;
+  zip: string;
+  city: string;
+  street: string;
+  place: string;
 }
