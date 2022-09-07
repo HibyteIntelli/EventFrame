@@ -41,7 +41,7 @@ export class EventLargeCardComponent implements OnInit {
   }
 
   getEventPrice() {
-    this.eventService.getEventPrice(this.event?.id).subscribe(response => this.eventPrice = response[0]?.ic_total_no_tax);
+    this.eventService.getEventPrice(this.event?.id).subscribe(response => this.eventPrice = response[0]?.ic_total_no_tax + response[0]?.ic_tax);
   }
 
 }

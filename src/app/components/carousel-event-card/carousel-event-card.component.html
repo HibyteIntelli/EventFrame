@@ -1,20 +1,24 @@
 <p-card styleClass="event-card">
-<!--  <img src="assets/L1120454.jpeg">-->
   <p-carousel [value]="getFilteredCarousel()"
               [numVisible]="1"
               [numScroll]="1"
-              [circular]="true">
+              [circular]="true"
+              (onPage)="currentPage = $event.page">
     <ng-template let-event pTemplate="item">
       <div class="event-item">
+        <img src="assets/L1120454.jpeg" class="bg-image" *ngIf="isEven(currentPage % 2) === 0">
+
+        <img src="assets/Bildschirmfoto-2022-08-17-um-14.43.51%20(1).png" class="bg-image"
+             *ngIf="isEven(currentPage % 2) === 1">
         <div class="info-container">
           <div class="info-row">
-            <p class="f-700 card-text">{{event?.type}}</p>
+            <p class="f-700 card-text white">{{event?.type}}</p>
             <div class="info-row-date normal-bold">
               <p class="card-text f-700">{{event?.startDate | date: "dd.MM.yyyy | HH:mm" }} Uhr</p>
             </div>
           </div>
           <div class="text-container">
-            <p class="card-text text-left event-title">{{event?.name.toUpperCase()}}</p>
+            <p class="card-text text-left event-title white">{{event?.name.toUpperCase()}}</p>
           </div>
         </div>
         <div class="btn-container">

@@ -12,6 +12,7 @@ export class CarouselEventCardComponent implements OnInit {
   @Input() events: Event[];
   filteredCarousel: Event[];
   filteredEvents: Event[] = [];
+  currentPage: number = 1;
 
   constructor(public sanitizer: DomSanitizer) {
   }
@@ -22,4 +23,9 @@ export class CarouselEventCardComponent implements OnInit {
   getFilteredCarousel(): Event[] {
     return this.events.filter(event => event.visibility === 1 && event.web_visibility === 1);
   }
+
+  isEven(number: number) {
+    return Math.abs(number);
+  }
+
 }
