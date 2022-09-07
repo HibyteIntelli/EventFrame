@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {map, Observable} from "rxjs";
+import {lastValueFrom, map, Observable} from 'rxjs';
 import {Event} from "../data/event";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
@@ -18,6 +18,7 @@ export class EventsService {
         .map(event => ({
           id: event.e_id,
           name: event.e_name,
+          guid: event.e_event_guid,
           description: event.e_desc,
           startDate: event.e_s_date,
           startHour: event.e_s_hour,
@@ -40,6 +41,7 @@ export class EventsService {
     return this.httpClient.get<any>(`${environment.apiUrl}/events/${id}`).pipe(
       map(event => ({
         id: event.e_id,
+        guid: event.e_event_guid,
         name: event.e_name,
         description: event.e_desc,
         startDate: event.e_s_date,

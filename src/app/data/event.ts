@@ -16,6 +16,7 @@ export interface Event {
   description: string;
   name: string;
   location: string;
+  guid: string;
   startDate: string;
   startHour: string;
   endHour: string;

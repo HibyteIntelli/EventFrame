@@ -95,6 +95,32 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.info-container {
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carousel-redirect-btn {
+  border-radius: 25px;
+  background: #98D1E2;
+  border: 1px solid #98D1E2;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-family: "Fira Sans", "Fira Sans", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+.carousel-redirect-btn:hover {
+  background: #addae8;
+  border-color: #addae8;
+}
+.text-container {
+  line-height: 18px;
+  font-family: "Fira Sans", "Fira Sans", sans-serif;
+  font-weight: 500;
+}
 @media only screen and (max-width: 480px) {
   :host ::ng-deep .p-card-header {
     padding: 12px;

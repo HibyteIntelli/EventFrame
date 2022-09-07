@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Event, EventCategory} from "../../data/event";
 import {EventsService} from "../../services/events.service";
 import {ActivatedRoute} from "@angular/router";
+import {DatePipe} from '@angular/common';
 
 @Component({
   selector: 'app-event-large-card',
@@ -12,9 +13,9 @@ export class EventLargeCardComponent implements OnInit {
 
   EventCategory = EventCategory;
   event: Event;
-  eventPrice: number;
+  eventPrice: number = 0;
 
-  constructor(private eventService: EventsService, private route: ActivatedRoute) {
+  constructor(private eventService: EventsService, private route: ActivatedRoute, private datePipe: DatePipe) {
   }
 
   ngOnInit(): void {
@@ -24,15 +25,23 @@ export class EventLargeCardComponent implements OnInit {
     })
   }
 
-  getEndTime(): string {
-    if (this.event?.endHour) {
-      return this.event?.endHour.slice(0, this.event.endHour?.length - 3);
+  getEventTime(): string {
+    if (this.getTime(this.event?.startHour) === '00:00' && this.getTime(this.event?.endHour) === '23:59') {
+      return 'Ganztägig';
+    } else {
+      return this.datePipe.transform(this.event?.startDate, 'dd.MM.yyyy | HH:mm') + '-' + this.getTime(this.event?.endHour) + ' Uhr';
+    }
+  }
+
+  getTime(time: string): string {
+    if (time) {
+      return time.slice(0, time.length - 3);
     }
     return '';
   }
 
   getEventPrice() {
-    this.eventService.getEventPrice(this.event?.id).subscribe(response => this.eventPrice = response[0].ic_total_no_tax);
+    this.eventService.getEventPrice(this.event?.id).subscribe(response => this.eventPrice = response[0]?.ic_total_no_tax);
   }
 
 }
