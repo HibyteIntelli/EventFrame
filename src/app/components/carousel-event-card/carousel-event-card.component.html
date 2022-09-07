@@ -1,22 +1,25 @@
 <p-card styleClass="event-card">
+<!--  <img src="assets/L1120454.jpeg">-->
   <p-carousel [value]="getFilteredCarousel()"
               [numVisible]="1"
               [numScroll]="1"
               [circular]="true">
     <ng-template let-event pTemplate="item">
       <div class="event-item">
-        <div class="info-row">
-          <p class="f-700 card-text">{{event?.type}}</p>
-          <div class="info-row-date normal-bold">
-            <p class="card-text f-700">{{event?.startDate | date: "dd.MM.yyyy | HH:mm" }} Uhr</p>
+        <div class="info-container">
+          <div class="info-row">
+            <p class="f-700 card-text">{{event?.type}}</p>
+            <div class="info-row-date normal-bold">
+              <p class="card-text f-700">{{event?.startDate | date: "dd.MM.yyyy | HH:mm" }} Uhr</p>
+            </div>
           </div>
-        </div>
-        <div class="text-container">
-          <p class="card-text text-left event-title">{{event?.name.toUpperCase()}}</p>
+          <div class="text-container">
+            <p class="card-text text-left event-title">{{event?.name.toUpperCase()}}</p>
+          </div>
         </div>
         <div class="btn-container">
           <a target="_parent" href="https://dev.codelords.de/agv-bs/event-detail/?event_id={{event.id}}"
-             class="target-button rounded-button turqoise turqoise-hover">ZUM EVENT</a>
+             class="carousel-redirect-btn">ZUM EVENT</a>
         </div>
       </div>
     </ng-template>
