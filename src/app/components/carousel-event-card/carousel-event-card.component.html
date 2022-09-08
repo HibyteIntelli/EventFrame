@@ -11,7 +11,7 @@
           <div class="info-row">
             <p class="f-700 card-text white">{{event?.type}}</p>
             <div class="info-row-date normal-bold">
-              <p class="card-text f-700">{{event?.startDate | date: "dd.MM.yyyy | HH:mm" }} Uhr</p>
+              <p class="card-text f-700">{{getEventTime(event)}}</p>
             </div>
           </div>
           <div class="text-container">

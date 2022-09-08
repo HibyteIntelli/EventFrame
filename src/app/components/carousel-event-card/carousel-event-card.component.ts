@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Event} from "../../data/event";
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
+import {DatePipe} from '@angular/common';
+import {EventsService} from '../../services/events.service';
 
 @Component({
   selector: 'app-carousel-event-card',
@@ -13,7 +15,9 @@ export class CarouselEventCardComponent implements OnInit {
   filteredCarousel: Event[];
   filteredEvents: Event[] = [];
 
-  constructor(public sanitizer: DomSanitizer) {
+  constructor(public sanitizer: DomSanitizer,
+              private datePipe: DatePipe,
+              private eventService: EventsService) {
   }
 
   ngOnInit(): void {
@@ -37,6 +41,10 @@ export class CarouselEventCardComponent implements OnInit {
     } else {
       return 'assets/default-img.jpeg';
     }
+  }
+
+  getEventTime(event: Event) {
+    return this.datePipe.transform(event?.startDate, 'dd.MM.yyyy') + ' | ' + this.eventService.getTime(event?.startHour) + ' Uhr';
   }
 
 }

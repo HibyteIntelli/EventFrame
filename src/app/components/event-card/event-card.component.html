@@ -17,7 +17,7 @@
           <i class="pi pi-map-marker p-pr-1" *ngIf="showDetails"></i>
           <p class="f-700">{{event?.location}}</p>
         </div>
-        <p class="f-700">{{event?.startDate | date: "dd.MM.yyyy | h:mm" }} Uhr</p>
+        <p class="f-700">{{getEventTime()}}</p>
       </div>
     </div>
     <p class="p-pt-4" [class.description]="!showDetails" [innerHTML]="event.description"></p>

@@ -26,18 +26,11 @@ export class EventLargeCardComponent implements OnInit {
   }
 
   getEventTime(): string {
-    if (this.getTime(this.event?.startHour) === '00:00' && this.getTime(this.event?.endHour) === '23:59') {
+    if (this.eventService.getTime(this.event?.startHour) === '00:00' && this.eventService.getTime(this.event?.endHour) === '23:59') {
       return 'Ganztägig';
     } else {
-      return this.datePipe.transform(this.event?.startDate, 'dd.MM.yyyy') + ' | ' + this.getTime(this.event?.startHour)  + '-' + this.getTime(this.event?.endHour) + ' Uhr';
+      return this.datePipe.transform(this.event?.startDate, 'dd.MM.yyyy') + ' | ' + this.eventService.getTime(this.event?.startHour)  + '-' + this.eventService.getTime(this.event?.endHour) + ' Uhr';
     }
-  }
-
-  getTime(time: string): string {
-    if (time) {
-      return time.slice(0, time.length - 3);
-    }
-    return '';
   }
 
   getEventPrice() {

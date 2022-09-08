@@ -65,4 +65,11 @@ export class EventsService {
   getEventPrice(eventId: number) {
     return this.httpClient.get<any>(`${environment.apiUrl}/invoice-configs/event/${eventId}`);
   }
+
+  getTime(time: string): string {
+    if (time) {
+      return time.slice(0, time.length - 3);
+    }
+    return '';
+  }
 }
