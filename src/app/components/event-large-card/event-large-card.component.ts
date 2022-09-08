@@ -29,7 +29,7 @@ export class EventLargeCardComponent implements OnInit {
     if (this.getTime(this.event?.startHour) === '00:00' && this.getTime(this.event?.endHour) === '23:59') {
       return 'Ganztägig';
     } else {
-      return this.datePipe.transform(this.event?.startDate, 'dd.MM.yyyy | HH:mm') + '-' + this.getTime(this.event?.endHour) + ' Uhr';
+      return this.datePipe.transform(this.event?.startDate, 'dd.MM.yyyy') + ' | ' + this.getTime(this.event?.startHour)  + '-' + this.getTime(this.event?.endHour) + ' Uhr';
     }
   }
 
