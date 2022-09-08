@@ -26,7 +26,7 @@
     </div>
     <p class="p-pt-4 description" [innerHTML]="event?.description"></p>
   </div>
-  <p class="f-700 p-pt-3" *ngIf="eventPrice > 0">{{eventPrice}} €</p>
+  <p class="f-700 p-pt-3" *ngIf="eventPrice > 0">Für die Teilnahme fallen Kosten in Höhe von {{eventPrice}},00 Euro (zzgl. MwSt.) pro Person an.</p>
   <div class="p-pt-3 p-pb-3 text-left btn-container">
     <a target="_parent" href="https://www.agv-veranstaltungen.de/login.php?forward=true&e_event_guid={{event?.guid}}"
        class="target-button rounded-button turqoise turqoise-hover">BUCHEN</a>

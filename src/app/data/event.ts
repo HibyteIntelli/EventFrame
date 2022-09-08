@@ -29,4 +29,5 @@ export interface Event {
   city: string;
   street: string;
   place: string;
+  web_logo_mt: string;
 }

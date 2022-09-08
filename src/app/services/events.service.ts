@@ -32,7 +32,8 @@ export class EventsService {
           zip: event.e_zip,
           street: event.e_street,
           city: event.e_city,
-          place: event.e_place
+          place: event.e_place,
+          web_logo_mt: event.e_website_logo_mt
         }))));
   }
 
@@ -56,7 +57,8 @@ export class EventsService {
         zip: event.e_zip,
         street: event.e_street,
         city: event.e_city,
-        place: event.e_place
+        place: event.e_place,
+        web_logo_mt: event.e_website_logo_mt
       })));
   }
 
