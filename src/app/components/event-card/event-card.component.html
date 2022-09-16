@@ -20,7 +20,9 @@
         <p class="f-700">{{getEventTime()}}</p>
       </div>
     </div>
-    <p class="p-pt-4" [class.description]="!showDetails" [innerHTML]="event.description"></p>
+    <div [class.description]="!showDetails">
+      <p class="p-pt-4" [innerHTML]="event.description"></p>
+    </div>
     <div *ngIf="showDetails" class="p-pt-3 p-pb-3 details-container" fxLayout="column" fxLayoutAlign="center center">
       <button pButton type="button" label="ZUM EVENT" class="rounded-button turqoise"></button>
     </div>

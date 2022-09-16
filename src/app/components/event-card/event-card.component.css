@@ -91,6 +91,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.description > * {
+  display: inline;
+}
 
 .event-title {
   padding-top: 2rem;
