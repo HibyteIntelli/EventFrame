@@ -33,7 +33,8 @@ export class EventsService {
           street: event.e_street,
           city: event.e_city,
           place: event.e_place,
-          web_logo_mt: event.e_website_logo_mt
+          web_logo_mt: event.e_website_logo_mt,
+          state: event.e_state
         }))));
   }
 
@@ -58,7 +59,8 @@ export class EventsService {
         street: event.e_street,
         city: event.e_city,
         place: event.e_place,
-        web_logo_mt: event.e_website_logo_mt
+        web_logo_mt: event.e_website_logo_mt,
+        state: event.e_state
       })));
   }
 

@@ -59,11 +59,11 @@ export class CardListComponent implements OnInit {
   }
 
   paginateData(fromIndex: number) {
-    this.filteredEvents = this.events.filter(event => event.visibility === 1 && event.web_visibility === 1).slice(fromIndex, fromIndex + 4);
+    this.filteredEvents = this.events.filter(event => event.visibility === 1 && event.web_visibility === 1 && event.state > 3).slice(fromIndex, fromIndex + 4);
   }
 
   calculatePageCount() {
-    this.pageCount = Math.ceil (this.events.filter(event => event.visibility === 1 && event.web_visibility === 1).length / 4);
+    this.pageCount = Math.ceil (this.events.filter(event => event.visibility === 1 && event.web_visibility === 1 && event.state > 3).length / 4);
   }
 
   changePage($event) {

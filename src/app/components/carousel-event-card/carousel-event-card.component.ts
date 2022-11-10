@@ -12,8 +12,6 @@ import {EventsService} from '../../services/events.service';
 export class CarouselEventCardComponent implements OnInit {
 
   @Input() events: Event[];
-  filteredCarousel: Event[];
-  filteredEvents: Event[] = [];
 
   constructor(public sanitizer: DomSanitizer,
               private datePipe: DatePipe,
@@ -24,7 +22,7 @@ export class CarouselEventCardComponent implements OnInit {
   }
 
   getFilteredCarousel(): Event[] {
-    return this.events.filter(event => event.visibility === 1 && event.web_visibility === 1);
+    return this.events.filter(event => event.visibility === 1 && event.web_visibility === 1 && event.state > 3);
   }
 
   public getImage(event: Event): SafeResourceUrl {
