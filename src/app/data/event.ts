@@ -19,6 +19,7 @@ export interface Event {
   guid: string;
   startDate: string;
   startHour: string;
+  endDate: string;
   endHour: string;
   type: EventType;
   category: EventCategory;
