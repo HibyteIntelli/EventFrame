@@ -22,7 +22,7 @@ export class CarouselEventCardComponent implements OnInit {
   }
 
   getFilteredCarousel(): Event[] {
-    return this.events.filter(event => event.visibility === 1 && event.web_visibility === 1 && event.state > 3 && new Date(event.endDate).getTime() > Date.now());
+    return this.events.filter(event => event.visibility === 1 && event.web_visibility === 1 && event.state > 3 && new Date(event.endDate).getTime() > Date.now()).sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime());
   }
 
   public getImage(event: Event): SafeResourceUrl {
